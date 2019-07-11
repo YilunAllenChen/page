@@ -47,6 +47,10 @@ p.lead {
   font-weight: 400;
 }
 
+.expItem:hover {
+  color: #AAAAAA;
+}
+
 .subheading {
   text-transform: uppercase;
   font-weight: 500;
@@ -58,7 +62,7 @@ p.lead {
   display: inline-block;
   height: 3.5rem;
   width: 3.5rem;
-  background-color: #495057;
+  background-color: #801336;
   color: #fff !important;
   border-radius: 100%;
   text-align: center;
@@ -72,7 +76,7 @@ p.lead {
 }
 
 .social-icons a:hover {
-  background-color: #BD5D38;
+  background-color: #c72c41;
 }
 
 .dev-icons {
@@ -80,7 +84,7 @@ p.lead {
 }
 
 .dev-icons .list-inline-item i:hover {
-  color: #BD5D38;
+  color: #c72c41;
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
@@ -90,7 +94,7 @@ p.lead {
 }
 
 #sideNav .navbar-toggler:focus {
-  outline-color: #d48a6e;
+  outline-color: #c72c41;
 }
 
 @media (min-width: 992px) {
@@ -176,19 +180,19 @@ section.resume-section .resume-item .resume-date {
 }
 
 .bg-primary {
-  background-color: rgb(14, 0, 66) !important;
+  background-color: #801336 !important;
 }
 
 .text-primary {
-  color: rgb(41, 169, 255) !important;
+  color: #0c084c !important;
 }
 
 a {
-  color: rgb(0, 132, 255);
+  color: #0c084c;
 }
 
 a:hover, a:focus, a:active {
-  color: rgb(5, 90, 201);
+  color: #11999e;
 }
 
 .bg {
