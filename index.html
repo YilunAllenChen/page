@@ -1,480 +1,949 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>YilunAllenChen</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/magic-grid/dist/magic-grid.min.js"></script>
-    <link rel="stylesheet" href="index.css">
-  <link rel="icon" href="https://avatars.githubusercontent.com/u/32376517?v=4" type="image/png"></head>
+<!DOCTYPE html>
+<html lang="en">
 
-  <body>
-    <div id="loading">
-      <div id="spinner"></div>
-    </div>
-    <div id="profile">
-      <div id="profile_img" style="background: url(https://avatars.githubusercontent.com/u/32376517?v=4) center;"></div>
-      <div id="username"><span style="display:block;">Yilun "Allen" Chen</span><a href="https://github.com/YilunAllenChen">@YilunAllenChen</a></div>
-      <div id="userbio" style="display: none;">undefined</div>
-      <div id="about">
-                <span style="display:block;"><i class="fas fa-users"></i> &nbsp; DRW</span>
-                <span style="display:none;"><i class="fas fa-envelope"></i> &nbsp; null</span>
-                <span style="display:none;"><i class="fas fa-link"></i> &nbsp; <a href=""></a></span>
-                <span style="display:block;"><i class="fas fa-map-marker-alt"></i> &nbsp;&nbsp; Chicago, IL</span>
-                <span style="display:none;"><i class="fas fa-user-tie"></i> &nbsp;&nbsp; Available for hire</span>
-                <div class="socials">
-                <span style="display:none !important;"><a href="https://www.twitter.com/null" target="_blank" class="socials"><i class="fab fa-twitter"></i></a></span>
-                <span style="display:none !important;"><a href="https://www.dribbble.com/null" target="_blank" class="socials"><i class="fab fa-dribbble"></i></a></span>
-                <span style="display:block;"><a href="https://www.linkedin.com/in/yilun-allen-chen-572b71141/" target="_blank" class="socials"><i class="fab fa-linkedin-in"></i></a></span>
-                <span style="display:none !important;"><a href="https://www.medium.com/@null/" target="_blank" class="socials"><i class="fab fa-medium-m"></i></a></span>
-                </div>
-                </div>
-    </div>
-    <div id="display">
-      <div id="work">
-        <h1>Work.</h1>
-        <div class="projects" id="work_section">
-                        <a href="https://github.com/DaVinciErgoLab/DaVinciErgoLab.github.io" target="_blank">
-                        <section>
-                            <div class="section_title">DaVinciErgoLab.github.io</div>
-                            <div class="about_section">
-                            <span style="display:none;">undefined</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; HTML</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/fz-lyu/FaceRecoCamera" target="_blank">
-                        <section>
-                            <div class="section_title">FaceRecoCamera</div>
-                            <div class="about_section">
-                            <span style="display:block;">Intelligent Face Recognition with Database</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; JavaScript</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 1</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/Leslie569/ECE4150_Project" target="_blank">
-                        <section>
-                            <div class="section_title">ECE4150_Project</div>
-                            <div class="about_section">
-                            <span style="display:none;">undefined</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/RosemaryW/SourceCodeSonificator" target="_blank">
-                        <section>
-                            <div class="section_title">SourceCodeSonificator</div>
-                            <div class="about_section">
-                            <span style="display:block;">2019 Georgia Tech Horizon Hackathon</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 1</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/YilunAllenChen/a1_ros" target="_blank">
-                        <section>
-                            <div class="section_title">a1_ros</div>
-                            <div class="about_section">
-                            <span style="display:none;">undefined</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:none;"><i class="fas fa-code"></i>&nbsp; null</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 4</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/YilunAllenChen/Cecropiia" target="_blank">
-                        <section>
-                            <div class="section_title">Cecropiia</div>
-                            <div class="about_section">
-                            <span style="display:block;">Cecropia II</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/YilunAllenChen/Cozmo_Delivery" target="_blank">
-                        <section>
-                            <div class="section_title">Cozmo_Delivery</div>
-                            <div class="about_section">
-                            <span style="display:none;">undefined</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/YilunAllenChen/Cozmo_localization" target="_blank">
-                        <section>
-                            <div class="section_title">Cozmo_localization</div>
-                            <div class="about_section">
-                            <span style="display:none;">undefined</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/YilunAllenChen/Cozmo_Path_Planning" target="_blank">
-                        <section>
-                            <div class="section_title">Cozmo_Path_Planning</div>
-                            <div class="about_section">
-                            <span style="display:none;">undefined</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/YilunAllenChen/DormRover" target="_blank">
-                        <section>
-                            <div class="section_title">DormRover</div>
-                            <div class="about_section">
-                            <span style="display:block;">web-based remote control rover robot</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; C++</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/YilunAllenChen/dotfiles" target="_blank">
-                        <section>
-                            <div class="section_title">dotfiles</div>
-                            <div class="about_section">
-                            <span style="display:block;">finally.</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Lua</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/YilunAllenChen/Dowwin" target="_blank">
-                        <section>
-                            <div class="section_title">Dowwin</div>
-                            <div class="about_section">
-                            <span style="display:block;">The new Project Dowwin</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/YilunAllenChen/Flafka" target="_blank">
-                        <section>
-                            <div class="section_title">Flafka</div>
-                            <div class="about_section">
-                            <span style="display:block;">flask+kafka</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; JavaScript</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/YilunAllenChen/Flamongo" target="_blank">
-                        <section>
-                            <div class="section_title">Flamongo</div>
-                            <div class="about_section">
-                            <span style="display:block;">A Flask server backed by MongoDB</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/YilunAllenChen/GTAV_SDC" target="_blank">
-                        <section>
-                            <div class="section_title">GTAV_SDC</div>
-                            <div class="about_section">
-                            <span style="display:block;">Self driving cars in GTA V based on pure CV</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; C++</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/YilunAllenChen/personal-flink" target="_blank">
-                        <section>
-                            <div class="section_title">personal-flink</div>
-                            <div class="about_section">
-                            <span style="display:block;">flink for personal use</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Scala</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/YilunAllenChen/Rambot" target="_blank">
-                        <section>
-                            <div class="section_title">Rambot</div>
-                            <div class="about_section">
-                            <span style="display:none;">undefined</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; JavaScript</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/YilunAllenChen/Rusk" target="_blank">
-                        <section>
-                            <div class="section_title">Rusk</div>
-                            <div class="about_section">
-                            <span style="display:block;">performant rusty option grid greeks</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Jupyter Notebook</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/YilunAllenChen/YilunAllenChen.github.io" target="_blank">
-                        <section>
-                            <div class="section_title">YilunAllenChen.github.io</div>
-                            <div class="about_section">
-                            <span style="display:block;">Personal website</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; HTML</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 0</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/YilunAllenChen/BrushBot" target="_blank">
-                        <section>
-                            <div class="section_title">BrushBot</div>
-                            <div class="about_section">
-                            <span style="display:none;">undefined</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 1</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/YilunAllenChen/CBF" target="_blank">
-                        <section>
-                            <div class="section_title">CBF</div>
-                            <div class="about_section">
-                            <span style="display:block;">Rendezvous Consensus Problem with Double Integrator Control Barrier Function Simulation</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 1</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 1</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/YilunAllenChen/Cecropia" target="_blank">
-                        <section>
-                            <div class="section_title">Cecropia</div>
-                            <div class="about_section">
-                            <span style="display:block;">The Environment Monitoring system of the Slothbot project</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; TeX</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 1</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/YilunAllenChen/codemposer" target="_blank">
-                        <section>
-                            <div class="section_title">codemposer</div>
-                            <div class="about_section">
-                            <span style="display:block;">Compose music from any of your code files.</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 1</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/YilunAllenChen/Dowwin_legacy" target="_blank">
-                        <section>
-                            <div class="section_title">Dowwin_legacy</div>
-                            <div class="about_section">
-                            <span style="display:none;">undefined</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 1</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/YilunAllenChen/ECE6560" target="_blank">
-                        <section>
-                            <div class="section_title">ECE6560</div>
-                            <div class="about_section">
-                            <span style="display:block;">anti-aliasing using PDE</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 1</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/YilunAllenChen/SlothBot_v2" target="_blank">
-                        <section>
-                            <div class="section_title">SlothBot_v2</div>
-                            <div class="about_section">
-                            <span style="display:block;">The SlothBot project, v2.0. Since 2020.</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; C++</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 1</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/YilunAllenChen/tradingsim" target="_blank">
-                        <section>
-                            <div class="section_title">tradingsim</div>
-                            <div class="about_section">
-                            <span style="display:block;">trading simulator</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; HTML</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 1</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
-                            </div>
-                        </section>
-                        </a>
-                        <a href="https://github.com/YilunAllenChen/YingXao" target="_blank">
-                        <section>
-                            <div class="section_title">YingXao</div>
-                            <div class="about_section">
-                            <span style="display:none;">undefined</span>
-                            </div>
-                            <div class="bottom_section">
-                                <span style="display:inline-block;"><i class="fas fa-code"></i>&nbsp; Python</span>
-                                <span><i class="fas fa-star"></i>&nbsp; 2</span>
-                                <span><i class="fas fa-code-branch"></i>&nbsp; 1</span>
-                            </div>
-                        </section>
-                        </a></div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Allen's Website</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/myself.jpg" alt="Allen Chen" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Richard hanrick">Yilun "Allen" Chen</h1>
+
+          <p class="title">Tinkerer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
       </div>
-      <div id="forks" style="display:none;">
-        <h1>Forks.</h1>
-        <div class="projects" id="forks_section"></div>
-      </div>
-      <div id="blog_section">
-        <h1>Blog.</h1>
-        <div id="blogs"></div>
-      </div>
-      <div id="footer">
-        <a href="https://github.com/imfunniee" target="_blank">made on earth by a human</a>
-      </div>
-    </div>
-    <script type="text/javascript">
-      setTimeout(function() {
-        document.getElementById("loading").classList.add("animated");
-        document.getElementById("loading").classList.add("fadeOut");
-        setTimeout(function() {
-          document.getElementById("loading").classList.remove("animated");
-          document.getElementById("loading").classList.remove("fadeOut");
-          document.getElementById("loading").style.display = "none";
-        }, 800);
-      }, 1500);
-      $.getJSON("blog.json", function(blog) {
-        blog = blog || [];
-        if (blog.length == 0) {
-          return (document.getElementById("blog_section").style.display =
-            "none");
-        }
-        for (var i = 0; i < blog.length; i++) {
-          $("#blogs").append(`
-            <a href="./blog/${blog[i].url_title}/" target="_blank">
-                <section>
-                    <img src="./blog/${blog[i].url_title}/${blog[i].top_image}">
-                    <div class="blog_container">
-                        <div class="section_title">${blog[i].title}</div>
-                        <div class="about_section">
-                            ${blog[i].sub_title}
-                        </div>
-                    </div>
-                </section>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:allenchenyilun1999@gmail.com" class="contact-link">allenchenyilun1999@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+14044099683" class="contact-link">+1 (404) 409-9683</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Chicago, IL, USA</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
             </a>
-            `);
-        }
-      }).fail(function() {
-        return (document.getElementById("blog_section").style.display = "none");
-      });
-    </script>
+          </li>
 
-    <script>
-      const magicProjectsGrid = new MagicGrid({
-        container: "#work_section",
-        animate: false,
-        gutter: 30, // default gutter size
-        static: true,
-        useMin: false,
-        maxColumns: 2,
-        useTransform: true
-      });
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
 
-      const magicForksGrid = new MagicGrid({
-        container: "#forks_section",
-        animate: false,
-        gutter: 30, // default gutter size
-        static: true,
-        useMin: false,
-        maxColumns: 2,
-        useTransform: true
-      });
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
 
-      $("document").ready(() => {
-        magicProjectsGrid.listen();
-        magicForksGrid.listen();
-      });
-    </script>
-  
+        </ul>
 
-</body></html>
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Projects</button>
+          </li>
+
+          <!-- <li class="navbar-item"> -->
+          <!--   <button class="navbar-link" data-nav-link>Contact</button> -->
+          <!-- </li> -->
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+          I'm a software engineer, Made In China. I enjoy building and automating things.
+          </p>
+
+          <p>
+          Currently I'm a software developer in the quantitative finance industry, working for one of the best proprietary trading firms, DRW. I work with quantitative traders and researchers on a daily basis, building and maintaining tools to help them make smarter and more informed trading decisions.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Architect</h4>
+
+                <p class="service-item-text">
+                I design extendable, maintainable, easy-to-reason, scalable software architectures.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Build</h4>
+
+                <p class="service-item-text">
+                  I exploit restrictions in problems; Implement, optimize, rinse and repeat.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-quote.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mobile apps</h4>
+
+                <p class="service-item-text">
+                  I talk with clients, learn from them, build for them.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Learn</h4>
+
+                <p class="service-item-text">
+                  I love trying new things, and integrate them into my world.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!-- <!-- -->
+        <!--   - testimonials -->
+        <!-- --> -->
+        <!---->
+        <!-- <section class="testimonials"> -->
+        <!---->
+        <!--   <h3 class="h3 testimonials-title">Testimonials</h3> -->
+        <!---->
+        <!--   <ul class="testimonials-list has-scrollbar"> -->
+        <!---->
+        <!--     <li class="testimonials-item"> -->
+        <!--       <div class="content-card" data-testimonials-item> -->
+        <!---->
+        <!--         <figure class="testimonials-avatar-box"> -->
+        <!--           <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar> -->
+        <!--         </figure> -->
+        <!---->
+        <!--         <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4> -->
+        <!---->
+        <!--         <div class="testimonials-text" data-testimonials-text> -->
+        <!--           <p> -->
+        <!--             Richard was hired to create a corporate identity. We were very pleased with the work done. She has a -->
+        <!--             lot of experience -->
+        <!--             and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt -->
+        <!--             consectetur adipiscing -->
+        <!--             elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia. -->
+        <!--           </p> -->
+        <!--         </div> -->
+        <!---->
+        <!--       </div> -->
+        <!--     </li> -->
+        <!---->
+        <!--     <li class="testimonials-item"> -->
+        <!--       <div class="content-card" data-testimonials-item> -->
+        <!---->
+        <!--         <figure class="testimonials-avatar-box"> -->
+        <!--           <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar> -->
+        <!--         </figure> -->
+        <!---->
+        <!--         <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4> -->
+        <!---->
+        <!--         <div class="testimonials-text" data-testimonials-text> -->
+        <!--           <p> -->
+        <!--             Richard was hired to create a corporate identity. We were very pleased with the work done. She has a -->
+        <!--             lot of experience -->
+        <!--             and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt -->
+        <!--             consectetur adipiscing -->
+        <!--             elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia. -->
+        <!--           </p> -->
+        <!--         </div> -->
+        <!---->
+        <!--       </div> -->
+        <!--     </li> -->
+        <!---->
+        <!--     <li class="testimonials-item"> -->
+        <!--       <div class="content-card" data-testimonials-item> -->
+        <!---->
+        <!--         <figure class="testimonials-avatar-box"> -->
+        <!--           <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar> -->
+        <!--         </figure> -->
+        <!---->
+        <!--         <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4> -->
+        <!---->
+        <!--         <div class="testimonials-text" data-testimonials-text> -->
+        <!--           <p> -->
+        <!--             Richard was hired to create a corporate identity. We were very pleased with the work done. She has a -->
+        <!--             lot of experience -->
+        <!--             and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt -->
+        <!--             consectetur adipiscing -->
+        <!--             elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia. -->
+        <!--           </p> -->
+        <!--         </div> -->
+        <!---->
+        <!--       </div> -->
+        <!--     </li> -->
+        <!---->
+        <!--     <li class="testimonials-item"> -->
+        <!--       <div class="content-card" data-testimonials-item> -->
+        <!---->
+        <!--         <figure class="testimonials-avatar-box"> -->
+        <!--           <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar> -->
+        <!--         </figure> -->
+        <!---->
+        <!--         <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4> -->
+        <!---->
+        <!--         <div class="testimonials-text" data-testimonials-text> -->
+        <!--           <p> -->
+        <!--             Richard was hired to create a corporate identity. We were very pleased with the work done. She has a -->
+        <!--             lot of experience -->
+        <!--             and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt -->
+        <!--             consectetur adipiscing -->
+        <!--             elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia. -->
+        <!--           </p> -->
+        <!--         </div> -->
+        <!---->
+        <!--       </div> -->
+        <!--     </li> -->
+        <!---->
+        <!--   </ul> -->
+        <!---->
+        <!-- </section> -->
+        <!---->
+        <!---->
+        <!-- <!-- -->
+        <!--   - testimonials modal -->
+        <!-- --> -->
+        <!---->
+        <!-- <div class="modal-container" data-modal-container> -->
+        <!---->
+        <!--   <div class="overlay" data-overlay></div> -->
+        <!---->
+        <!--   <section class="testimonials-modal"> -->
+        <!---->
+        <!--     <button class="modal-close-btn" data-modal-close-btn> -->
+        <!--       <ion-icon name="close-outline"></ion-icon> -->
+        <!--     </button> -->
+        <!---->
+        <!--     <div class="modal-img-wrapper"> -->
+        <!--       <figure class="modal-avatar-box"> -->
+        <!--         <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img> -->
+        <!--       </figure> -->
+        <!---->
+        <!--       <img src="./assets/images/icon-quote.svg" alt="quote icon"> -->
+        <!--     </div> -->
+        <!---->
+        <!--     <div class="modal-content"> -->
+        <!---->
+        <!--       <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4> -->
+        <!---->
+        <!--       <time datetime="2021-06-14">14 June, 2021</time> -->
+        <!---->
+        <!--       <div data-modal-text> -->
+        <!--         <p> -->
+        <!--           Richard was hired to create a corporate identity. We were very pleased with the work done. She has a -->
+        <!--           lot of experience -->
+        <!--           and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt -->
+        <!--           consectetur adipiscing -->
+        <!--           elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia. -->
+        <!--         </p> -->
+        <!--       </div> -->
+        <!---->
+        <!--     </div> -->
+        <!---->
+        <!--   </section> -->
+        <!---->
+        <!-- </div> -->
+        <!---->
+        <!---->
+        <!-- <!-- -->
+        <!--   - clients -->
+        <!-- --> -->
+        <!---->
+        <!-- <section class="clients"> -->
+        <!---->
+        <!--   <h3 class="h3 clients-title">Clients</h3> -->
+        <!---->
+        <!--   <ul class="clients-list has-scrollbar"> -->
+        <!---->
+        <!--     <li class="clients-item"> -->
+        <!--       <a href="#"> -->
+        <!--         <img src="./assets/images/logo-1-color.png" alt="client logo"> -->
+        <!--       </a> -->
+        <!--     </li> -->
+        <!---->
+        <!--     <li class="clients-item"> -->
+        <!--       <a href="#"> -->
+        <!--         <img src="./assets/images/logo-2-color.png" alt="client logo"> -->
+        <!--       </a> -->
+        <!--     </li> -->
+        <!---->
+        <!--     <li class="clients-item"> -->
+        <!--       <a href="#"> -->
+        <!--         <img src="./assets/images/logo-3-color.png" alt="client logo"> -->
+        <!--       </a> -->
+        <!--     </li> -->
+        <!---->
+        <!--     <li class="clients-item"> -->
+        <!--       <a href="#"> -->
+        <!--         <img src="./assets/images/logo-4-color.png" alt="client logo"> -->
+        <!--       </a> -->
+        <!--     </li> -->
+        <!---->
+        <!--     <li class="clients-item"> -->
+        <!--       <a href="#"> -->
+        <!--         <img src="./assets/images/logo-5-color.png" alt="client logo"> -->
+        <!--       </a> -->
+        <!--     </li> -->
+        <!---->
+        <!--     <li class="clients-item"> -->
+        <!--       <a href="#"> -->
+        <!--         <img src="./assets/images/logo-6-color.png" alt="client logo"> -->
+        <!--       </a> -->
+        <!--     </li> -->
+        <!---->
+        <!--   </ul> -->
+        <!---->
+        <!-- </section> -->
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Software Developer @ DRW Holdings</h4>
+
+              <span>2022 — Present</span>
+
+              <p class="timeline-text">
+              Build reliable, performant, easy-to-use tools for quantitative traders.
+
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Founder & CEO @ DaVinci Ergonomics Laboratory</h4>
+
+              <span>2022</span>
+
+              <p class="timeline-text">
+              Lead a team to build mechanical ergonomic keyboards from the ground up.
+
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Software Developer Intern @ DRW Holdings</h4>
+
+              <span>Summer 2022</span>
+
+              <p class="timeline-text">
+              Design and build large scale language-agnostic big data ingestion engines.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Hardware Engineering Intern @ Uber Advanced Technology Group</h4>
+
+              <span>Summer 2021</span>
+
+              <p class="timeline-text">
+              Rearchitect and optimize autonomous vehicles fleet orchestration software.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Robotics Researcher @ Georgia Tech</h4>
+
+              <span>2019 - 2021</span>
+
+              <p class="timeline-text">
+              Build all kinds of robots - fast, slow, monolithic, swarm.
+              </p>
+
+            </li>
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Georgia Institute of Technology</h4>
+
+              <span>2021 - 2022</span>
+
+              <p class="timeline-text">
+              Master of Science, Electrical and Computer Engineering
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Georgia Institute of Technology</h4>
+
+              <span>2017 — 2021</span>
+
+              <p class="timeline-text">
+              Bachelor of Science, Computer Engineering
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+        <!-- <section class="skill"> -->
+        <!---->
+        <!--   <h3 class="h3 skills-title">My skills</h3> -->
+        <!---->
+        <!--   <ul class="skills-list content-card"> -->
+        <!---->
+        <!--     <li class="skills-item"> -->
+        <!---->
+        <!--       <div class="title-wrapper"> -->
+        <!--         <h5 class="h5">Web design</h5> -->
+        <!--         <data value="80">80%</data> -->
+        <!--       </div> -->
+        <!---->
+        <!--       <div class="skill-progress-bg"> -->
+        <!--         <div class="skill-progress-fill" style="width: 80%;"></div> -->
+        <!--       </div> -->
+        <!---->
+        <!--     </li> -->
+        <!---->
+        <!--     <li class="skills-item"> -->
+        <!---->
+        <!--       <div class="title-wrapper"> -->
+        <!--         <h5 class="h5">Graphic design</h5> -->
+        <!--         <data value="70">70%</data> -->
+        <!--       </div> -->
+        <!---->
+        <!--       <div class="skill-progress-bg"> -->
+        <!--         <div class="skill-progress-fill" style="width: 70%;"></div> -->
+        <!--       </div> -->
+        <!---->
+        <!--     </li> -->
+        <!---->
+        <!--     <li class="skills-item"> -->
+        <!---->
+        <!--       <div class="title-wrapper"> -->
+        <!--         <h5 class="h5">Branding</h5> -->
+        <!--         <data value="90">90%</data> -->
+        <!--       </div> -->
+        <!---->
+        <!--       <div class="skill-progress-bg"> -->
+        <!--         <div class="skill-progress-fill" style="width: 90%;"></div> -->
+        <!--       </div> -->
+        <!---->
+        <!--     </li> -->
+        <!---->
+        <!--     <li class="skills-item"> -->
+        <!---->
+        <!--       <div class="title-wrapper"> -->
+        <!--         <h5 class="h5">WordPress</h5> -->
+        <!--         <data value="50">50%</data> -->
+        <!--       </div> -->
+        <!---->
+        <!--       <div class="skill-progress-bg"> -->
+        <!--         <div class="skill-progress-fill" style="width: 50%;"></div> -->
+        <!--       </div> -->
+        <!---->
+        <!--     </li> -->
+        <!---->
+        <!--   </ul> -->
+        <!---->
+        <!-- </section> -->
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="projects" data-page="projects">
+
+        <header>
+          <h2 class="h2 article-title">Projects</h2>
+        </header>
+
+        <section class="projects">
+          <!---->
+          <!-- <ul class="filter-list"> -->
+          <!---->
+          <!--   <li class="filter-item"> -->
+          <!--     <button class="active" data-filter-btn>All</button> -->
+          <!--   </li> -->
+          <!---->
+          <!--   <li class="filter-item"> -->
+          <!--     <button data-filter-btn>Trading</button> -->
+          <!--   </li> -->
+          <!---->
+          <!--   <li class="filter-item"> -->
+          <!--     <button data-filter-btn>Robotics</button> -->
+          <!--   </li> -->
+          <!---->
+          <!--   <li class="filter-item"> -->
+          <!--     <button data-filter-btn>Others</button> -->
+          <!--   </li> -->
+          <!---->
+          <!-- </ul> -->
+          <section class="about-text">
+            <p>
+            I build a wildly wide range of stuff. Mostly just for fun.
+            </p>
+          </section>
+
+          <!-- <div class="filter-select-box"> -->
+          <!---->
+          <!--   <button class="filter-select" data-select> -->
+          <!---->
+          <!--     <div class="select-value" data-selecct-value>Select category</div> -->
+          <!---->
+          <!--     <div class="select-icon"> -->
+          <!--       <ion-icon name="chevron-down"></ion-icon> -->
+          <!--     </div> -->
+          <!---->
+          <!--   </button> -->
+          <!---->
+          <!--   <ul class="select-list"> -->
+          <!---->
+          <!--     <li class="select-item"> -->
+          <!--       <button data-select-item>All</button> -->
+          <!--     </li> -->
+          <!---->
+          <!--     <li class="select-item"> -->
+          <!--       <button data-select-item>Trading</button> -->
+          <!--     </li> -->
+          <!---->
+          <!--     <li class="select-item"> -->
+          <!--       <button data-select-item>Robotics</button> -->
+          <!--     </li> -->
+          <!---->
+          <!--     <li class="select-item"> -->
+          <!--       <button data-select-item>Others</button> -->
+          <!--     </li> -->
+          <!---->
+          <!--   </ul> -->
+          <!---->
+          <!-- </div> -->
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="Trading">
+              <a href="https://stingray-app-v8dur.ondigitalocean.app/" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/tradingsim.png" alt="tradingsim" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Trading Simulator</h3>
+
+                <p class="project-category">
+                FIFO matching engine. Trade against others either through a web gui, or APIs
+                </p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="Robotics">
+              <a href="https://news.gatech.edu/news/2020/06/16/slothbot-garden-demonstrates-hyper-efficient-conservation-robot" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/slothbot.jpeg" alt="slothbot" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">The SlothBot</h3>
+
+                <p class="project-category">
+                Hyper-energy-efficient environment monitoring field robots.
+                </p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="Robotics">
+              <a href="https://cecropia.web.app/" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/cecropia.png" alt="cecropia" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Project Cecropia</h3>
+
+                <p class="project-category">
+                Cloud-based asynchronous orchestration system for field robot swarms
+                </p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="Others">
+              <a href="https://github.com/YilunAllenChen/ECE6560" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/pde.png" alt="PDE" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Anti-aliasing with PDE</h3>
+
+                <p class="project-category">
+                Computer graphics enhancements purely with partial differential equations
+                </p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="Robotics">
+              <a href="https://www.youtube.com/watch?v=K5tWRnS-N8U" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/sdc.png" alt="Self Driving Cars in GTA" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Self-driving Cars in GTA</h3>
+
+                <p class="project-category">
+                Pure vision-based self-driving cars in Grand Theft Auto V.
+                </p>
+              </a>
+            </li>
+
+
+            <li class="project-item  active" data-filter-item data-category="Others">
+              <a href="https://github.com/YilunAllenChen/codemposer" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/sonicpy.png" alt="Codemposer" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Codemposer</h3>
+
+                <p class="project-category">
+                Turn any source code into funnily beautiful music.
+                </p>
+              </a>
+            </li>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+
+      <!--
+        - #CONTACT
+      -->
+      <!---->
+      <!-- <article class="contact" data-page="contact"> -->
+      <!---->
+      <!--   <header> -->
+      <!--     <h2 class="h2 article-title">Contact</h2> -->
+      <!--   </header> -->
+      <!---->
+      <!--   <section class="mapbox" data-mapbox> -->
+      <!--     <figure> -->
+      <!--       <iframe -->
+      <!--         src="https://www.google.com/maps/place/DRW/@41.8887512,-87.6467656,18.09z/data=!4m5!3m4!1s0x880e2cc6e8a36f31:0x52795a48e8764ed2!8m2!3d41.8822456!4d-87.6416738" -->
+      <!--         width="400" height="300" loading="lazy"></iframe> -->
+      <!--     </figure> -->
+      <!--   </section> -->
+      <!---->
+      <!--   <section class="contact-form"> -->
+      <!---->
+      <!--     <h3 class="h3 form-title">Contact Form</h3> -->
+      <!---->
+      <!--     <form action="#" class="form" data-form> -->
+      <!---->
+      <!--       <div class="input-wrapper"> -->
+      <!--         <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input> -->
+      <!---->
+      <!--         <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input> -->
+      <!--       </div> -->
+      <!---->
+      <!--       <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea> -->
+      <!---->
+      <!--       <button class="form-btn" type="submit" disabled data-form-btn> -->
+      <!--         <ion-icon name="paper-plane"></ion-icon> -->
+      <!--         <span>Send Message</span> -->
+      <!--       </button> -->
+      <!---->
+      <!--     </form> -->
+      <!---->
+      <!--   </section> -->
+      <!---->
+      <!-- </article> -->
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
