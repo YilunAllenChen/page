@@ -35,8 +35,7 @@ impl Component for Tour {
     }
 
     fn view(&self, _ctx: &Context<Self>) -> Html {
-        // iterate through all files under ../artifacts/ with .yaml extension at compile time
-        let yaml = include_str!("../artifacts/build/compiled.yaml");
+        let yaml = include_str!("../artifacts/build/compiled_projects.yaml");
         let built_yaml: BuiltYaml = serde_yaml::from_str(yaml).unwrap();
 
         let mut article_props = built_yaml.artifacts;

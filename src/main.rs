@@ -16,7 +16,6 @@ pub enum Page {
     Contact,
     Tour,
     About,
-
     Wip,
 }
 

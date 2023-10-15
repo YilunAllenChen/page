@@ -5,127 +5,10 @@ use regex::Regex;
 
 include!("src/code/raw_artifact.rs");
 
-pub struct TokenType {
-    name: &'static str,
-    pattern: Regex,
-}
-
-#[derive(Debug)]
-enum Either {
-    Matched(String),
-    NotMatched(String),
-}
-
-impl TokenType {
-    pub fn new(name: &'static str, pattern: &'static str) -> Self {
-        Self {
-            name,
-            pattern: Regex::new(pattern).unwrap(),
-        }
-    }
-    fn parse(&self, either: Either) -> Either {
-        match either {
-            Either::Matched(token) => Either::Matched(token),
-            Either::NotMatched(token) => match self.pattern.find(token.as_str()) {
-                Some(_) => Either::Matched(format!("<span class='{}'>{}</span>", self.name, token)),
-                None => Either::NotMatched(token),
-            },
-        }
-    }
-}
-
-pub fn highlight_html(
-    input: String,
-    tokenizer_pattern: Regex,
-    token_types: Vec<TokenType>,
-) -> String {
-    // let tokens: Vec<&str> =
-    tokenizer_pattern
-        .captures_iter(input.as_str())
-        .filter_map(|cap| cap.get(1))
-        .map(|s| s.as_str())
-        .map(|t| {
-            let mut maybe_match = Either::NotMatched(t.to_string());
-            for token_type in &token_types {
-                maybe_match = token_type.parse(maybe_match);
-            }
-            match maybe_match {
-                Either::Matched(r) => r,
-                Either::NotMatched(r) => format!("<span class='{}'>{}</span>", "var", r),
-            }
-        })
-        .collect::<String>()
-}
-
-pub fn highlight(lang: Language, code: String) -> String {
-    match lang {
-        Language::Haskell => highlight_html(
-            code,
-            Regex::new(r"(--.*\n|\n|\.|\s+|\[|\:+|\]|\(|\)|\{|\}|\w+|\S+)").unwrap(),
-            vec![
-                TokenType::new("comments", r"--.*\n"),
-                TokenType::new("control", r"\b(if|else|case|of|then)\b"),
-                TokenType::new("bind", r"\b(let|in|where|data|newtype|type)\b"),
-                TokenType::new("op", r"->|\||<-|\.\.|::|:|=|@|~|\+\+|>|<"),
-                TokenType::new("structs", r"[\[\](){}]"),
-                TokenType::new("cls", r"[A-Z]\w+"),
-            ],
-        ),
-        Language::Rust => highlight_html(
-            code,
-            Regex::new(r"(\/\/.*|\n|\.|\s+|\[|\:+|\]|\(|\)|\{|\}|\w+|\S+)").unwrap(),
-            vec![
-                TokenType::new("comments", r"\/\/.*"),
-                TokenType::new(
-                    "control",
-                    r"\b(if|else|match|for|while|in|return|fn|struct|enum|impl|trait|use|pub|mod|as|from|break|continue)\b",
-                ),
-                TokenType::new("op", r"->|\||<-|\.\.|::|:|=|@|~|\+\+|>|<"),
-                TokenType::new("structs", r"[\[\](){}]"),
-                TokenType::new("cls", r"[A-Z]\w+"),
-            ],
-        ),
-        Language::Python => highlight_html(
-            code,
-            Regex::new(r"(#.*\n|\n|\.|\s+|\[|\:+|\]|\(|\)|\{|\}|\w+|\S+)").unwrap(),
-            vec![
-                TokenType::new("comments", r"#.*"),
-                TokenType::new(
-                    "control",
-                    r"\b(if|else|elif|for|while|in|return|def|class|with|as|from|import|pass|break|continue)\b",
-                ),
-                TokenType::new("op", r"->|\||<-|\.\.|::|:|=|@|~|\+\+|>|<"),
-                TokenType::new("structs", r"[\[\](){}]"),
-                TokenType::new("cls", r"[A-Z]\w+"),
-            ],
-        ),
-        _ => {
-            println!(
-                "Highlighting for {:?} not implemented yet; using generic parser",
-                lang
-            );
-            highlight_html(
-                code,
-                Regex::new(r"(--.*\n|\/\/.*|\n|\.|\s+|\[|\:+|\]|\(|\)|\{|\}|\w+|\S+)").unwrap(),
-                vec![
-                    TokenType::new("comments", r"\/\/.*"),
-                    TokenType::new(
-                        "control",
-                        r"\b(if|else|match|for|while|in|return|fn|struct|enum|impl|trait|use|pub|mod|as|from|break|continue)\b",
-                    ),
-                    TokenType::new("op", r"->|\||<-|\.\.|::|:|=|@|~|\+\+|>|<"),
-                    TokenType::new("structs", r"[\[\](){}]"),
-                    TokenType::new("cls", r"[A-Z]\w+"),
-                ],
-            )
-        }
-    }
-}
-
 fn main() {
-    let path_pattern = Regex::new(r"src/artifacts.*\.yaml").unwrap();
+    let path_pattern = Regex::new(r"src/artifacts/projects.*\.yaml").unwrap();
 
-    let articles: Vec<RawArticle> = fs::read_dir("src/artifacts")
+    let articles: Vec<RawArticle> = fs::read_dir("src/artifacts/projects/")
         .unwrap()
         .map(|f| f.unwrap())
         .filter(|f| f.metadata().unwrap().is_file())
@@ -169,7 +52,7 @@ fn main() {
         meta,
     };
 
-    let output_path = Path::new("src/artifacts/build/compiled.yaml");
+    let output_path = Path::new("src/artifacts/build/compiled_projects.yaml");
     let parent = output_path.parent().unwrap();
     if !parent.exists() {
         fs::create_dir_all(parent).expect("Failed to create the dir");
