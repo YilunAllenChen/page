@@ -36,17 +36,17 @@ struct BuiltYaml {
 }
 #[derive(Clone, PartialEq, Deserialize, Debug, Eq, Serialize)]
 pub enum ProjectStatus {
-    Done,
-    InProgress,
-    Abondoned,
+    Completed,
+    Ongoing,
+    Discontinued,
 }
 
 impl ProjectStatus {
     fn priority(&self) -> u8 {
         match self {
-            ProjectStatus::Done => 0,
-            ProjectStatus::InProgress => 100,
-            ProjectStatus::Abondoned => 200,
+            ProjectStatus::Completed => 0,
+            ProjectStatus::Ongoing => 100,
+            ProjectStatus::Discontinued => 200,
         }
     }
 }

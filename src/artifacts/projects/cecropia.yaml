@@ -1,7 +1,7 @@
 title: Cecropia
 time: "2020-10"
 languages: [Python, Javascript]
-status: Done
+status: Completed
 tags: ["Robotics", "Cloud"]
 link: https://cecropia.web.app/
 preview: |-
@@ -11,4 +11,6 @@ desc: |-
 
   It allows users to monitor SlothBot's status, and control the robot remotely, or schedule the robot to perform certain tasks (when they wake up)
 
-  It's built with React, Firebase, and Google Cloud Platform.
+  Built with React, Firebase, and Google Cloud Platform.
+  
+  Click on the title to visit the project website. (The SlothBots are probably offline though :))

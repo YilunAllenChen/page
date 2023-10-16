@@ -1,7 +1,7 @@
-title: Cecropia
+title: Project Dowwin
 time: "2019-02"
 languages: [Python]
-status: Done
+status: Completed
 tags: [Trading]
 link: https://github.com/YilunAllenChen/Dowwin
 preview: |-
@@ -12,4 +12,3 @@ desc: |-
   With a unified interface to fetch market data from multiple sources, the platform has milliseoncd-level latency to the market, albeit a completely free system.
 
   It trains hundreds of roboadvisors with different strategy parameters, and use evolution algorithms to filter out the best ones.
-

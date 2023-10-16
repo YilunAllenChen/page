@@ -1,13 +1,13 @@
 title: Karage
 time: "2022-09"
 languages: [Rust]
-status: InProgress
+status: Ongoing
 tags: ["Trading"]
 link: https://github.com/YilunAllenChen/Karage
 preview: |-
   assets/karage.png
 desc: |-
-  Karage set out to be a fully-featured trading platform fully written in Rust.
+  Karage set out to be a fully-featured trading platform fully written in pure Rust.
 
   As of Sept 2022, an experimental market-making bot has been implemented.
   

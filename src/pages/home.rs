@@ -26,7 +26,7 @@ impl Component for Home {
 
     fn view(&self, ctx: &Context<Self>) -> Html {
         html! {
-            <div class="bg-black h-full">
+            <div class="transition-opacity duration-500 opacity-30 hover:opacity-100 bg-black h-full">
                 <div class="relative isolate px-6 pt-14 lg:px-8">
                     <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 bg-opacity-50">
                         <div class="text-center">

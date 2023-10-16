@@ -1,7 +1,7 @@
 title: Self Driving Car in GTAV
 time: "2021-03"
 languages: [Cpp, Python]
-status: Done
+status: Completed
 tags: ["Art"]
 link: https://www.youtube.com/watch?v=K5tWRnS-N8U&t=1s
 preview: |-
@@ -13,3 +13,4 @@ desc: |-
 
   The output of the neural net is then fed into both a simulation environment to reconstruct the state of the world, and a controller to control the car.
 
+  Built with C++ and Python.

@@ -1,7 +1,7 @@
 title: Museum of Code
 time: "2023-10"
 languages: [Rust]
-status: InProgress
+status: Ongoing
 tags: ["Art"]
 link: https://yilunallenchen.github.io/museum_of_code/
 preview: |-
@@ -11,4 +11,6 @@ desc: |-
 
   It's a playful project that aims to showcase the beauty of computer programs in the form of a museum.
 
-  It's built with Rust and WebAssembly, and is hosted on GitHub Pages.
+  It's built with Rust/Yew and Tailwind CSS, and is hosted on GitHub Pages.
+
+  Click on the title to visit the project website.
