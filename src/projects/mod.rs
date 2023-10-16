@@ -92,7 +92,7 @@ impl Component for Project {
             .collect::<Vec<Html>>();
 
         html! {
-          <article class="bg-slate-900 flex rounded-lg p-4 flex-col items-start justify-between">
+          <article class="bg-slate-900 flex rounded-lg p-4 md:p-8 flex-col items-start justify-between">
             <div class="flex items-center gap-x-2 text-xs">
             <time datetime="2020-03-16" class="text-gray-300">{proj.time.clone()}</time>
             </div>
