@@ -1,12 +1,7 @@
-# My Personal Page
-
-Built with Rust, Yew and Tailwind CSS.
+# [Personal Page](https://yilunallenchen.github.io/YilunAllenChen/)
 
 
-# [VISIT HERE!](https://yilunallenchen.github.io)
-
-
-# Developer setup
+### Developer setup
 1.  Install Rust
     ```bash
     curl https://sh.rustup.rs -sSf | sh
