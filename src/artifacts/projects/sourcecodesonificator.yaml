@@ -1,0 +1,14 @@
+title: Source Code Sonificator
+time: "2019-05"
+languages: [Python]
+status: Done
+tags: ["Music"]
+link: https://github.com/YilunAllenChen/codemposer
+preview: |-
+  assets/sonicpy.png
+desc: |-
+  This playful project is a Python library that converts source code into music.
+
+  It looks for patterns in the code, and then maps those patterns to musical notes.
+
+  First Place, HackGT 2019 Georgia Tech Horizon Hackathon.

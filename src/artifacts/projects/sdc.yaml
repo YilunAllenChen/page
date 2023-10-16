@@ -1,0 +1,15 @@
+title: Self Driving Car in GTAV
+time: "2021-03"
+languages: [Cpp, Python]
+status: Done
+tags: ["Art"]
+link: https://www.youtube.com/watch?v=K5tWRnS-N8U&t=1s
+preview: |-
+  assets/sdc.png
+desc: |-
+  This project aims to build a self driving car in Grand Theft Auto V.
+
+  The camera capture is done in C++ using the OpenCV library, and the neural network is trained in Python.
+
+  The output of the neural net is then fed into both a simulation environment to reconstruct the state of the world, and a controller to control the car.
+

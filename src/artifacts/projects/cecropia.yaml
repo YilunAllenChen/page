@@ -1,0 +1,14 @@
+title: Cecropia
+time: "2020-10"
+languages: [Python, Javascript]
+status: Done
+tags: ["Robotics", "Cloud"]
+link: https://cecropia.web.app/
+preview: |-
+  assets/cecropia.png
+desc: |-
+  Cecropia is where SlothBot lives on - it's a all-in-one dashboard for SlothBot fleets.
+
+  It allows users to monitor SlothBot's status, and control the robot remotely, or schedule the robot to perform certain tasks (when they wake up)
+
+  It's built with React, Firebase, and Google Cloud Platform.

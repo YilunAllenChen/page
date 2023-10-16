@@ -49,7 +49,7 @@ impl Component for Nav {
             html! {
                 <div class="z-50 fixed bottom-4 left-4">
 
-                <div class="flex-none rounded-full bg-blue-500/20 p-1">
+                <div class="flex-none rounded-full bg-blue-500/20 p-2">
                   <button
                       class="w-16 h-16 bg-blue-500 text-white rounded-full flex items-center justify-center"
                       onclick={ctx.link().callback(|_| Msg::ToggleSidebar)}
@@ -73,15 +73,15 @@ impl Component for Nav {
                 </div>
             }
         } else {
-            let nav_buttons = vec![Page::Home, Page::Contact, Page::Tour, Page::About]
+            let nav_buttons = vec![Page::Home, Page::Contact, Page::Projects]
                 .into_iter()
                 .map(|page| {
                     html! {
                         <button
                             onclick={ctx.link().callback(move |_| Msg::SelectPage(page))}
                             class=r#"
-                            rounded-md w-full bg-cyan-500 my-2.5 px-3.5 py-2.5
-                            text-sm font-semibold text-white shadow-sm hover:bg-cyan-300
+                            rounded-md w-full bg-blue-500 my-2.5 px-3.5 py-2.5
+                            text-sm font-semibold text-white shadow-sm hover:bg-blue-300
                         "#
                         >
                         {page.to_string()}
@@ -94,14 +94,14 @@ impl Component for Nav {
                 <div class="fixed inset-0 bg-gray-500 bg-opacity-25 transition-opacity"></div>
                 <div class="fixed inset-0 z-20 w-screen overflow-y-auto">
                   <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-                    <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-                      <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                    <div class="relative transform overflow-hidden rounded-lg text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                      <div class="bg-slate-700 px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
                           <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-                            <h3 class="text-base font-semibold leading-6 text-gray-900" id="modal-title">
+                            <h3 class="text-base font-semibold leading-6 text-slate-200" id="modal-title">
                               {"Navigate"}
                             </h3>
                             <div class="mt-2">
-                              <p class="text-sm text-gray-500">
+                              <p class="text-sm text-gray-300">
                                 {"Navigate to any page easily from here."}
                               </p>
                             </div>

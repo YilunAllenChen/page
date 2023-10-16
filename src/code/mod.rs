@@ -1,6 +1,20 @@
-mod lang_utils;
-mod projects;
-mod raw_artifact;
+use crate::html_utils::make_tag;
+use crate::models::Language;
 
-pub use projects::{Article, ArticleProps, ProjectStatus};
-pub use raw_artifact::{Language, MetaYaml};
+impl Language {
+    pub fn to_tag(&self) -> String {
+        match self {
+            Language::Haskell => make_tag("Haskell", "purple"),
+            Language::Rust => make_tag("Rust", "orange"),
+            Language::Python => make_tag("Python", "yellow"),
+            Language::Go => make_tag("Go", "cyan"),
+            Language::C => make_tag("C", "gray"),
+            Language::OCaml => make_tag("OCaml", "blue"),
+            Language::Cpp => make_tag("C++", "blue"),
+            Language::Javascript => make_tag("Javascript", "yellow"),
+            Language::Java => make_tag("Java", "red"),
+        }
+    }
+}
+
+// derive deserialize for Language

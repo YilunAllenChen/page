@@ -3,7 +3,7 @@ use std::path::Path;
 extern crate regex;
 use regex::Regex;
 
-include!("src/code/raw_artifact.rs");
+include!("src/models/mod.rs");
 
 fn main() {
     let path_pattern = Regex::new(r"src/artifacts/projects.*\.yaml").unwrap();
@@ -30,14 +30,7 @@ fn main() {
             )
             .unwrap();
 
-            RawArticle {
-                title: raw_artifact.title,
-                language: raw_artifact.language,
-                status: raw_artifact.status,
-                tags: raw_artifact.tags,
-                preview: raw_artifact.preview,
-                desc: raw_artifact.desc,
-            }
+            raw_artifact
             // make dir if not exists
         })
         .collect();

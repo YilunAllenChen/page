@@ -1,6 +1,7 @@
 use yew::prelude::*;
 
-use crate::code::{Article, ArticleProps, MetaYaml};
+use crate::models::{MetaYaml, RawArticle};
+use crate::projects::Project;
 use crate::Page;
 
 use serde::Deserialize;
@@ -8,7 +9,7 @@ use serde::Deserialize;
 #[derive(Deserialize, Debug)]
 pub struct BuiltYaml {
     pub meta: MetaYaml,
-    pub artifacts: Vec<ArticleProps>,
+    pub artifacts: Vec<RawArticle>,
 }
 
 pub struct Tour;
@@ -39,29 +40,21 @@ impl Component for Tour {
         let built_yaml: BuiltYaml = serde_yaml::from_str(yaml).unwrap();
 
         let mut article_props = built_yaml.artifacts;
-        article_props.sort_by(|a, b| a.status.cmp(&b.status));
-        let articles = article_props
+        article_props.sort_by(|a, b| a.time.cmp(&b.time));
+        let articles: Html = article_props
             .into_iter()
-            .map(|props| {
+            .rev()
+            .map(|proj| {
                 html! {
-                    <Article
-                    title={props.title}
-                    language={props.language}
-                    status={props.status}
-                    tags={props.tags}
-                    preview={props.preview}
-                    desc={props.desc}
-                    />
+                    <Project project={proj}/>
                 }
             })
-            .collect::<Vec<Html>>();
+            .collect();
 
         html! {
-            <div class="bg-black h-full">
-                <ul role="list" class="text-white px-4 md:px-40 md:py-10 divide-y divide-gray-800">
-                    {articles}
-                </ul>
-            </div>
+        <div class="mx-auto mt-10 grid px-8 grid-cols-1 gap-x-8 gap-y-16 pt-10 lg:grid-cols-2">
+            {articles}
+        </div>
         }
     }
 }

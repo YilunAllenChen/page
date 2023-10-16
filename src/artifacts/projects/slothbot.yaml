@@ -1,0 +1,12 @@
+title: SlothBot
+time: "2021-09"
+languages: [Cpp, Javascript, Python]
+status: Done
+tags: ["Robotics"]
+link: https://news.gatech.edu/news/2020/06/16/slothbot-garden-demonstrates-hyper-efficient-conservation-robot
+preview: |-
+  assets/slothbot.jpeg
+desc: |-
+  The SlothBot is a robot that moves slowly along a cable, monitoring the environment and collecting data on the climate.
+
+  It's a playful experiment in robotics, as it embraces "slowness" as a design paradigm, allowing us to not only rethink the way we interact with robots and the environment

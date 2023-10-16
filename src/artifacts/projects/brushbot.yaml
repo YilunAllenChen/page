@@ -1,0 +1,14 @@
+title: BrushBot 2.0
+time: "2020-09"
+languages: [Python, Cpp]
+status: Done
+tags: ["Robotics"]
+link: https://github.com/YilunAllenChen/BrushBot
+preview: |-
+  assets/brushbot.png
+desc: |-
+  BrushBot 2.0 is a continuation of the BrushBot project.
+
+  It aims to explore the randomness of movements in its most extreme form - the robot moves solely by vibrating its brush.
+
+  BrushBot 2.0 has significantly smaller size and weight, and is equipped with more advanced sensors.
