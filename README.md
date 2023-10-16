@@ -1,4 +1,4 @@
-# [Personal Page](https://yilunallenchen.github.io)
+# [Personal Page](https://yilunallenchen.github.io/YilunAllenChen/)
 
 
 ### Developer setup
