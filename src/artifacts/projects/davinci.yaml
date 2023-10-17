@@ -1,16 +1,14 @@
 title: DaVinci Ergonomics Laboratory
 time: "2022-10"
-languages: [Python, Cpp, Javascript]
+languages: [Cpp, Javascript]
 status: Completed
 tags: ["Hardware", "Startup"]
 link: https://davinci-ergo-lab.com/#home
 preview: |-
   assets/davinci.png
 desc: |-
-  DaVinci Ergonomics Laboratory is a startup that aims to build the next generation of ergonomic keyboards. I started this because I was so annoyed by the high price of ergonomic keyboards, and the lack of innovation in the space.
+  I built a startup aiming to build the next generation of ergonomic keyboards: customizable, affordable and empowering.
 
-  The keyboard is designed to be extremely customizable, and the firmware is open source (QMK/VIA).
-
-  Built with Python (operations), AutoDesk Eagle (PCB), AutoDesk Inventor CAD (mechanicals), C++ (firmware), and React (website).
+  Built with AutoDesk Eagle (PCB), AutoDesk Inventor CAD (mechanicals), C++ (firmware), and React (website).
 
   Click on the title to visit the project website.

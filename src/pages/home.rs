@@ -26,12 +26,12 @@ impl Component for Home {
 
     fn view(&self, ctx: &Context<Self>) -> Html {
         html! {
-            <div class="transition-opacity duration-500 opacity-30 hover:opacity-100 bg-black h-full">
+            <div class="bg-black h-full bg-cover bg-center" style="background-image: url('./assets/robot_and_seagull.png')">
                 <div class="relative isolate px-6 pt-14 lg:px-8">
                     <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 bg-opacity-50">
                         <div class="text-center">
                             <h1 class="text-4xl font-bold tracking-wider text-gray-100 sm:text-6xl font-mono">{"Allen Chen"}</h1>
-                            <p class="mt-6 text-lg leading-8 text-gray-300">{"Builder of Stuff"}</p>
+                            <p class="mt-6 text-lg leading-8 text-gray-300">{"I Built Stuff."}</p>
                             <div class="mt-10 flex flex-wrap items-center justify-center gap-x-6 mb-20">
                                 <button
                                     onclick={ctx.props().on_clicked.reform(|_| Page::Projects)}
