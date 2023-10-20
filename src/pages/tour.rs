@@ -52,10 +52,8 @@ impl Component for Tour {
             .collect();
 
         html! {
-        <div class="transition-opacity duration-500 opacity-30 hover:opacity-100">
-            <div class="mx-auto mt-10 grid px-8 grid-cols-1 gap-x-8 gap-y-16 pt-10 lg:grid-cols-2 xl:grid-cols-3 xl:px-4">
-                {articles}
-            </div>
+        <div class="mx-auto mt-10 grid px-8 grid-cols-1 gap-x-8 gap-y-16 pt-10 lg:grid-cols-2 xl:grid-cols-3 xl:px-4">
+            {articles}
         </div>
         }
     }
