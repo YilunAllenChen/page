@@ -30,7 +30,7 @@ impl Component for Experience {
         let exp = &ctx.props().experience;
         html! {
             <>
-              <li class="flex justify-between gap-x-6 py-5"
+              <li class="flex justify-between gap-x-4 py-5"
               >
                 <img class="h-12 w-12 rounded-full ring ring-slate-800" src={format!("assets/{}", exp.icon)} alt="" />
                 <div class="w-full">

@@ -50,9 +50,9 @@ impl Component for About {
 
         html! {
         <div class="bg-black h-full">
-            <div class="relative isolate px-6 pt-14 lg:px-8">
+            <div class="relative isolate px-2 pt-14 lg:px-8">
                 <div class="mx-auto max-w-4xl py-8 lg:py-12 bg-opacity-50">
-                    <ul role="list" class="text-white px-4 md:px-20 lg:px-36 md:py-10 divide-y divide-gray-800">
+                    <ul role="list" class="text-white px-2 md:px-20 lg:px-36 md:py-10 divide-y divide-gray-800">
                         {all_exp_html}
                     </ul>
                 </div>
