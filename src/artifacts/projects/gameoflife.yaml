@@ -1,14 +1,15 @@
-title: Conway's Game of Life
-time: "2021-12"
-languages: [Python]
-status: Completed
-tags: ["Game"]
-link: https://github.com/YilunAllenChen/pygame-of-life
-preview: |-
-  assets/gameoflife.png
-desc: |-
-  Conway's Game of Life is a cellular automaton devised by the British mathematician John Horton Conway in 1970. 
-  
-  It's a game where the player sets the initial state of the board, and then observes the evolution of the board.
+Project:
+  title: Conway's Game of Life
+  time: "2021-12"
+  languages: [Python]
+  status: Completed
+  tags: ["Game"]
+  link: https://github.com/YilunAllenChen/pygame-of-life
+  preview: |-
+    assets/gameoflife.png
+  desc: |-
+    Conway's Game of Life is a cellular automaton devised by the British mathematician John Horton Conway in 1970. 
+    
+    It's a game where the player sets the initial state of the board, and then observes the evolution of the board.
 
-  This implementation is Completed in Python using the PyGame library for rendering, and Pandas for vectorized matrix operations.
+    This implementation is Completed in Python using the PyGame library for rendering, and Pandas for vectorized matrix operations.

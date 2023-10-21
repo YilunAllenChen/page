@@ -1,16 +1,17 @@
-title: TradingSim
-time: "2022-12"
-languages: [Python, Javascript]
-status: Completed
-tags: ["Trading"]
-link: https://tradingsim.allenchen.dev/
-preview: |-
-  assets/tradingsim.png
-desc: |-
-  TradingSim is a trading simulator that allows players to trade against each other and bots in a simulated market. Market impact of orders are materialized and reflected in real time.
+Project:
+  title: TradingSim
+  time: "2022-12"
+  languages: [Python, Javascript]
+  status: Completed
+  tags: ["Trading"]
+  link: https://tradingsim.allenchen.dev/
+  preview: |-
+    assets/tradingsim.png
+  desc: |-
+    TradingSim is a trading simulator that allows players to trade against each other and bots in a simulated market. Market impact of orders are materialized and reflected in real time.
 
-  The simulator, backed by a FIFO matching engine, ships with both a web interface and RESTful API's.
+    The simulator, backed by a FIFO matching engine, ships with both a web interface and RESTful API's.
 
-  Built with Python (backend), Javascript with Bootstrap (frontend) (I got lazy)
+    Built with Python (backend), Javascript with Bootstrap (frontend) (I got lazy)
 
-  Click on the title to visit the project website.
+    Click on the title to visit the project website.

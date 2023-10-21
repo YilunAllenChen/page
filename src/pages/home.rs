@@ -43,6 +43,11 @@ impl Component for Home {
                                     class="rounded-md w-full md:w-1/4 bg-green-600 my-2.5 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                                     {"Contact Me"}
                                 </button>
+                                <button
+                                    onclick={ctx.props().on_clicked.reform(|_| Page::Experiences)}
+                                    class="rounded-md w-full md:w-1/4 bg-yellow-600 my-2.5 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-yellow-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600">
+                                    {"Experiences"}
+                                </button>
                             </div>
                             <p class="mt-2 text-xs md:text-base text-bold text-gray-300">{"Built with Rust/Yew, Tailwind CSS and ❤️"}</p>
                         </div>

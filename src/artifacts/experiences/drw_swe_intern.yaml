@@ -1,0 +1,11 @@
+Experience:
+  company: DRW
+  title: Software Engineering Intern
+  icon: drw.jpg
+  location: Chicago, IL
+  start_time: 2021-06
+  end_time: 2021-08
+  desc: |-
+    Large-scale Data Infrastructure
+        - Proof-of-concept high-throughput data pipeline
+        - Orchestration and monitoring dashboard

@@ -7,11 +7,11 @@ pub use home::Home;
 mod wip;
 pub use wip::Wip;
 
-mod tour;
-pub use tour::Tour;
+mod projects;
+pub use projects::Tour;
 
 mod nav;
 pub use nav::Nav;
 
-mod about;
-pub use about::About;
+mod experiences;
+pub use experiences::About;

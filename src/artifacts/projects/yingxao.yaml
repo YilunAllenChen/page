@@ -1,16 +1,17 @@
-title: Self-Watering Pot
-time: "2021-05"
-languages: [Python, Java]
-status: Completed
-tags: ["IoT"]
-link: https://github.com/YilunAllenChen/BrushBot
-preview: |-
-  assets/yingxao.png
-desc: |-
-  YingXao is a IoT solution for plant lovers.
+Project:
+  title: Self-Watering Pot
+  time: "2021-05"
+  languages: [Python, Java]
+  status: Completed
+  tags: ["IoT"]
+  link: https://github.com/YilunAllenChen/BrushBot
+  preview: |-
+    assets/yingxao.png
+  desc: |-
+    YingXao is a IoT solution for plant lovers.
 
-  It's a self-watering pot that automatically waters your plants when they are thirsty, and also adjusts lighting conditions to ensure optimal growth.
+    It's a self-watering pot that automatically waters your plants when they are thirsty, and also adjusts lighting conditions to ensure optimal growth.
 
-  It's also connected to the cloud platform, to make sure we can continuously improve the algorithm and provide the best care for your plants.
+    It's also connected to the cloud platform, to make sure we can continuously improve the algorithm and provide the best care for your plants.
 
-  Built with Python (controller) and Java (mobile app).
+    Built with Python (controller) and Java (mobile app).

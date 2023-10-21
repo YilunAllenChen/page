@@ -1,14 +1,15 @@
-title: SlothBot
-time: "2021-09"
-languages: [Cpp, Javascript, Python]
-status: Completed
-tags: ["Robotics"]
-link: https://news.gatech.edu/news/2020/06/16/slothbot-garden-demonstrates-hyper-efficient-conservation-robot
-preview: |-
-  assets/slothbot.jpeg
-desc: |-
-  The SlothBot is a robot that moves slowly along a cable, monitoring the environment and collecting data on the climate.
+Project:
+  title: SlothBot
+  time: "2021-09"
+  languages: [Cpp, Javascript, Python]
+  status: Completed
+  tags: ["Robotics"]
+  link: https://news.gatech.edu/news/2020/06/16/slothbot-garden-demonstrates-hyper-efficient-conservation-robot
+  preview: |-
+    assets/slothbot.jpeg
+  desc: |-
+    The SlothBot is a robot that moves slowly along a cable, monitoring the environment and collecting data on the climate.
 
-  It's a playful experiment in robotics, as it embraces "slowness" as a design paradigm, allowing us to not only rethink the way we interact with robots and the environment
+    It's a playful experiment in robotics, as it embraces "slowness" as a design paradigm, allowing us to not only rethink the way we interact with robots and the environment
 
-  Built with Autodesk Eagle (PCB), AutoDesk Inventor CAD (mechanicals), C++ (low-level controller firmware), Python (high-level controller firmware), and Javascript (frontend).
+    Built with Autodesk Eagle (PCB), AutoDesk Inventor CAD (mechanicals), C++ (low-level controller firmware), Python (high-level controller firmware), and Javascript (frontend).

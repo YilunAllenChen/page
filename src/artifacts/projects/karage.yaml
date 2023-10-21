@@ -1,14 +1,15 @@
-title: Karage
-time: "2022-09"
-languages: [Rust]
-status: Ongoing
-tags: ["Trading"]
-link: https://github.com/YilunAllenChen/Karage
-preview: |-
-  assets/karage.png
-desc: |-
-  Karage set out to be a fully-featured trading platform fully written in pure Rust.
+Project:
+  title: Karage
+  time: "2022-09"
+  languages: [Rust]
+  status: Ongoing
+  tags: ["Trading"]
+  link: https://github.com/YilunAllenChen/Karage
+  preview: |-
+    assets/karage.png
+  desc: |-
+    Karage set out to be a fully-featured trading platform fully written in pure Rust.
 
-  As of Sept 2022, an experimental market-making bot has been implemented.
-  
-  It automatically make quotes on the Binance exchange on Bitcoin Future contracts.
+    As of Sept 2022, an experimental market-making bot has been implemented.
+    
+    It automatically make quotes on the Binance exchange on Bitcoin Future contracts.

@@ -1,16 +1,8 @@
 use yew::prelude::*;
 
-use crate::models::{MetaYaml, RawArticle};
-use crate::projects::Project;
+use crate::items::Project;
+use crate::models::{BuiltYaml, OneOfArticle, RawArticle};
 use crate::Page;
-
-use serde::Deserialize;
-
-#[derive(Deserialize, Debug)]
-pub struct BuiltYaml {
-    pub meta: MetaYaml,
-    pub artifacts: Vec<RawArticle>,
-}
 
 pub struct Tour;
 
@@ -36,12 +28,19 @@ impl Component for Tour {
     }
 
     fn view(&self, _ctx: &Context<Self>) -> Html {
-        let yaml = include_str!("../artifacts/build/compiled_projects.yaml");
+        let yaml = include_str!("../artifacts/build/compiled.yaml");
         let built_yaml: BuiltYaml = serde_yaml::from_str(yaml).unwrap();
 
-        let mut article_props = built_yaml.artifacts;
-        article_props.sort_by(|a, b| a.time.cmp(&b.time));
-        let articles: Html = article_props
+        let mut all_artifacts: Vec<RawArticle> = built_yaml
+            .artifacts
+            .into_iter()
+            .filter_map(|a| match a {
+                OneOfArticle::Project(proj) => Some(proj),
+                _ => None,
+            })
+            .collect();
+        all_artifacts.sort_by(|a, b| a.time.cmp(&b.time));
+        let articles: Html = all_artifacts
             .into_iter()
             .rev()
             .map(|proj| {

@@ -5,9 +5,9 @@ use yew::prelude::*;
 
 mod code;
 mod html_utils;
+mod items;
 mod models;
 mod pages;
-mod projects;
 
 use pages::{Contact, Home, Nav, Tour, Wip};
 
@@ -18,7 +18,7 @@ pub enum Page {
     Home,
     Contact,
     Projects,
-    About,
+    Experiences,
     Wip,
 }
 
@@ -28,7 +28,7 @@ impl Display for Page {
             Page::Home => "Home",
             Page::Contact => "Contact",
             Page::Projects => "Projects",
-            Page::About => "About",
+            Page::Experiences => "Experiences",
             Page::Wip => "WIP",
         };
         write!(f, "{}", name)
@@ -76,7 +76,7 @@ impl Component for App {
             Page::Contact => html! {<Contact {on_clicked} />},
             Page::Home => html! {<Home {on_clicked} />},
             Page::Projects => html! {<Tour {on_clicked} />},
-            Page::About => html! {<About {on_clicked} />},
+            Page::Experiences => html! {<About {on_clicked} />},
             _ => html! {<Wip {on_clicked} />},
         };
         html! {

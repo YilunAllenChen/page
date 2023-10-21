@@ -1,0 +1,12 @@
+Experience:
+  company: DRW
+  title: Software Engineer
+  icon: drw.jpg
+  location: Chicago, IL
+  start_time: 2022-07
+  end_time: current
+  desc: |-
+    Desk Tools & Infrastructure
+        - High-performance, low-latency, and fault-tolerant data infrastructure
+        - Portfolio risk attribution and PnL tools
+        - Exotic option pricing infrastructure

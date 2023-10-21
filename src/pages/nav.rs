@@ -73,7 +73,7 @@ impl Component for Nav {
                 </div>
             }
         } else {
-            let nav_buttons = vec![Page::Home, Page::Contact, Page::Projects]
+            let nav_buttons = vec![Page::Home, Page::Contact, Page::Projects, Page::Experiences]
                 .into_iter()
                 .map(|page| {
                     html! {

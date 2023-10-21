@@ -1,14 +1,15 @@
-title: DaVinci Ergonomics Laboratory
-time: "2022-10"
-languages: [Cpp, Javascript]
-status: Completed
-tags: ["Hardware", "Startup"]
-link: https://davinci-ergo-lab.com/#home
-preview: |-
-  assets/davinci.png
-desc: |-
-  I built a startup aiming to build the next generation of ergonomic keyboards: customizable, affordable and empowering.
+Project:
+  title: DaVinci Ergonomics Laboratory
+  time: "2022-10"
+  languages: [Cpp, Javascript]
+  status: Completed
+  tags: ["Hardware", "Startup"]
+  link: https://davinci-ergo-lab.com/#home
+  preview: |-
+    assets/davinci.png
+  desc: |-
+    I built a startup aiming to build the next generation of ergonomic keyboards: customizable, affordable and empowering.
 
-  Built with AutoDesk Eagle (PCB), AutoDesk Inventor CAD (mechanicals), C++ (firmware), and React (website).
+    Built with AutoDesk Eagle (PCB), AutoDesk Inventor CAD (mechanicals), C++ (firmware), and React (website).
 
-  Click on the title to visit the project website.
+    Click on the title to visit the project website.
