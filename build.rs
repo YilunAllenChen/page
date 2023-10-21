@@ -6,7 +6,7 @@ include!("src/models/mod.rs");
 fn parse_dir(input_dirs: Vec<&str>, output_dir: &str) {
     let all_articles: Vec<OneOfArticle> = input_dirs
         .iter()
-        .map(|input_dir| {
+        .flat_map(|input_dir| {
             let articles: Vec<_> = fs::read_dir(input_dir)
                 .unwrap()
                 .map(|f| f.unwrap())
@@ -19,7 +19,7 @@ fn parse_dir(input_dirs: Vec<&str>, output_dir: &str) {
                             .expect("Failed to read the file")
                             .as_str(),
                     )
-                    .expect(format!("Failed to parse the file: {}", path).as_str());
+                    .unwrap_or_else(|_| panic!("Failed to parse the file: {}", path));
                     raw_artifact
                     // make dir if not exists
                 })
@@ -27,7 +27,6 @@ fn parse_dir(input_dirs: Vec<&str>, output_dir: &str) {
 
             articles
         })
-        .flatten()
         .collect();
 
     // build is millis since epoch
