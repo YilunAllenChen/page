@@ -32,7 +32,7 @@ impl Component for Experience {
             <>
               <li class="flex justify-between gap-x-6 py-5"
               >
-                <img class="h-12 w-12 rounded-full ring ring-slate-800" src={format!("/assets/{}", exp.icon)} alt="" />
+                <img class="h-12 w-12 rounded-full ring ring-slate-800" src={format!("assets/{}", exp.icon)} alt="" />
                 <div class="w-full">
                     <div class="flex justify-between min-w-0 gap-x-4">
                         <p class="text-base font-semibold text-gray-100">{exp.company.clone()}</p>
