@@ -7,5 +7,5 @@ Experience:
   end_time: 2021-08
   desc: |-
     Large-scale Data Infrastructure
-        - Proof-of-concept high-throughput data pipeline
-        - Orchestration and monitoring dashboard
+        - Proof-of-concept Language-agnostic High-throughput Data Pipeline
+        - Orchestration and Monitoring Dashboard
