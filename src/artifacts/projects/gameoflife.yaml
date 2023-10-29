@@ -12,4 +12,4 @@ Project:
     
     It's a game where the player sets the initial state of the board, and then observes the evolution of the board.
 
-    This implementation is Completed in Python using the PyGame library for rendering, and Pandas for vectorized matrix operations.
+    This implementation is Completed in Python using the PyGame library for rendering, and Numpy for vectorized matrix operations.

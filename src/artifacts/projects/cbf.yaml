@@ -1,0 +1,15 @@
+Project:
+  title: Control Barrier Function in Rendezvous Consensus
+  time: "2021-12"
+  languages: [Python]
+  status: Completed
+  tags: ["Robotics"]
+  link: https://github.com/YilunAllenChen/
+  preview: |-
+    assets/rendezvous.png
+  desc: |-
+    Rendezvous Consensus Problem with Double Integrator Control Barrier Function Simulation.
+
+    The algorithm allows agents, who only have local information, to reach a consensus on a rendezvous point, while avoiding collisions with each other and obstacles.
+
+    Implemented in Python.

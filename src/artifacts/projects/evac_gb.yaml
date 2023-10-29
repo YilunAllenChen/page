@@ -1,0 +1,15 @@
+Project:
+  title: Evacuate Greensboro
+  time: "2022-03"
+  languages: [Python]
+  status: Completed
+  tags: ["Simulation"]
+  link: https://arxiv.org/pdf/2305.12722.pdf
+  preview: |-
+    assets/evac.png
+  desc: |-
+    GreenEVT is a city-scale evacuation simulator with a focus on high-dimensional constraints and objectives - not just city traffic, but also load on the power grid due to charging electric vehicles.
+    
+    I was tasked to maintain the codebase for the hybrid simulator, and optimize its performance (resulted in 5x speedup).
+
+    Implemented in Python with a SQLite database, backed by integrations with SUMO and OpenDSS.
