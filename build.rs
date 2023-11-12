@@ -23,6 +23,16 @@ fn parse_dir(input_dirs: Vec<&str>, output_dir: &str) {
                     raw_artifact
                     // make dir if not exists
                 })
+                .map(|art| match art {
+                    OneOfArticle::Project(proj) => OneOfArticle::Project(RawProject {
+                        desc: markdown::to_html(proj.desc.as_str()),
+                        ..proj
+                    }),
+                    OneOfArticle::Experience(exp) => OneOfArticle::Experience(RawExperience {
+                        desc: markdown::to_html(exp.desc.as_str()),
+                        ..exp
+                    }),
+                })
                 .collect();
 
             articles

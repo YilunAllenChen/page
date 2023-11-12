@@ -13,5 +13,3 @@ Project:
     It aims to explore the randomness of movements in its most extreme form - the robot moves solely by vibrating its brush.
 
     BrushBot 2.0 has significantly smaller size and weight, and is equipped with more advanced sensors.
-
-    Built with microPython and C++.

@@ -2,6 +2,7 @@ use std::fmt::Display;
 
 use log::info;
 use yew::prelude::*;
+use yew_router::prelude::*;
 
 mod code;
 mod html_utils;
@@ -9,38 +10,51 @@ mod items;
 mod models;
 mod pages;
 
-use pages::{Contact, Home, Nav, Tour, Wip};
+use pages::{Contact, Experiences, Home, Nav, Projects, Wip};
 
-use crate::pages::About;
-
-#[derive(Debug, Clone, PartialEq, Copy)]
-pub enum Page {
+#[derive(Debug, Clone, PartialEq, Routable)]
+pub enum Route {
+    #[at("/")]
     Home,
+    #[at("/contact")]
     Contact,
+    #[at("/projects")]
     Projects,
+    #[at("/experiences")]
     Experiences,
-    Wip,
+    #[at("/*_path")]
+    Wip { _path: String },
 }
 
-impl Display for Page {
+impl Display for Route {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let name = match self {
-            Page::Home => "Home",
-            Page::Contact => "Contact",
-            Page::Projects => "Projects",
-            Page::Experiences => "Experiences",
-            Page::Wip => "WIP",
+            Route::Home => "Home",
+            Route::Contact => "Contact",
+            Route::Projects => "Projects",
+            Route::Experiences => "Experiences",
+            _ => "WIP",
         };
         write!(f, "{}", name)
     }
 }
 
+fn switch(route: Route) -> Html {
+    match route {
+        Route::Home => html! {<Home />},
+        Route::Contact => html! {<Contact/>},
+        Route::Experiences => html! {<Experiences />},
+        Route::Projects => html! {<Projects />},
+        Route::Wip { _path } => html! {<Wip />},
+    }
+}
+
 pub struct App {
-    active_page: Page,
+    active_page: Route,
 }
 
 pub enum Msg {
-    GoToPage(Page),
+    GoToPage(Route),
 }
 
 impl Component for App {
@@ -49,7 +63,7 @@ impl Component for App {
 
     fn create(_ctx: &Context<Self>) -> Self {
         Self {
-            active_page: Page::Home,
+            active_page: Route::Home,
         }
     }
 
@@ -68,22 +82,13 @@ impl Component for App {
 
     fn view(&self, ctx: &Context<Self>) -> Html {
         let on_clicked = ctx.link().callback(Msg::GoToPage);
-        let nav = html! {
-            <Nav {on_clicked} />
-        };
-        let on_clicked = ctx.link().callback(Msg::GoToPage);
-        let content = match self.active_page {
-            Page::Contact => html! {<Contact {on_clicked} />},
-            Page::Home => html! {<Home {on_clicked} />},
-            Page::Projects => html! {<Tour {on_clicked} />},
-            Page::Experiences => html! {<About {on_clicked} />},
-            _ => html! {<Wip {on_clicked} />},
-        };
+
         html! {
-        <>
-        {nav}
-        {content}
-        </>}
+            <HashRouter>
+                <Nav {on_clicked} />
+                <Switch<Route> render={switch} />
+            </HashRouter>
+        }
     }
 }
 

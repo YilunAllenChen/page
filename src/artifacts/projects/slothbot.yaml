@@ -11,5 +11,3 @@ Project:
     The SlothBot is a robot that moves slowly along a cable, monitoring the environment and collecting data on the climate.
 
     It's a playful experiment in robotics, as it embraces "slowness" as a design paradigm, allowing us to not only rethink the way we interact with robots and the environment
-
-    Built with Autodesk Eagle (PCB), AutoDesk Inventor CAD (mechanicals), C++ (low-level controller firmware), Python (high-level controller firmware), and Javascript (frontend).

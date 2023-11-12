@@ -10,6 +10,4 @@ Project:
   desc: |-
     GreenEVT is a city-scale evacuation simulator with a focus on high-dimensional constraints and objectives - not just city traffic, but also load on the power grid due to charging electric vehicles.
     
-    I was tasked to maintain the codebase for the hybrid simulator, and optimize its performance (resulted in 5x speedup).
-
-    Implemented in Python with a SQLite database, backed by integrations with SUMO and OpenDSS.
+    I was tasked to maintain the codebase for the hybrid simulator, and optimize its performance. With tactics like memoization and parallel computing, I managed to achieve a 5x speedup.

@@ -1,13 +1,12 @@
 use yew::prelude::*;
+use yew_router::scope_ext::RouterScopeExt;
 
-use crate::Page;
+use crate::Route;
 
 pub struct Contact;
 
 #[derive(Properties, PartialEq)]
-pub struct ContactProps {
-    pub on_clicked: Callback<Page>,
-}
+pub struct ContactProps {}
 
 impl Component for Contact {
     type Message = ();
@@ -26,8 +25,11 @@ impl Component for Contact {
     }
 
     fn view(&self, ctx: &Context<Self>) -> Html {
+        let navigator = ctx.link().navigator().unwrap();
+        let nav = |page| Callback::from(move |_| navigator.push(&page));
+
         html! {
-            <div class="bg-black h-full">
+            <div class="bg-black h-screen">
                 <div class="relative isolate px-6 pt-14 lg:px-8">
                     <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 bg-opacity-50">
                         <div class="text-center">
@@ -38,7 +40,7 @@ impl Component for Contact {
                                 >{"Email Me @ allenchenyilun1999@gmail.com"}</a>
                             </div>
                             <button
-                                onclick={ctx.props().on_clicked.reform(|_| Page::Home)}
+                                onclick={nav(Route::Home)}
                                 class="rounded-md disabled bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                                 {"Home"}
                             </button>

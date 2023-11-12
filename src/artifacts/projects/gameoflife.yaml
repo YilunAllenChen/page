@@ -11,5 +11,3 @@ Project:
     Conway's Game of Life is a cellular automaton devised by the British mathematician John Horton Conway in 1970. 
     
     It's a game where the player sets the initial state of the board, and then observes the evolution of the board.
-
-    This implementation is Completed in Python using the PyGame library for rendering, and Numpy for vectorized matrix operations.

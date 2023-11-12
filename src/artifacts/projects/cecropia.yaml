@@ -11,7 +11,3 @@ Project:
     Cecropia is where SlothBot lives on - it's a all-in-one dashboard for SlothBot fleets.
 
     It allows users to monitor SlothBot's status, and control the robot remotely, or schedule the robot to perform certain tasks (when they wake up)
-
-    Built with React, Firebase, and Google Cloud Platform.
-    
-    Click on the title to visit the project website. (The SlothBots are probably offline though :))

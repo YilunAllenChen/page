@@ -8,9 +8,7 @@ Project:
   preview: |-
     assets/breaking_dkim.png
   desc: |-
-    DKIM is a widely used email authentication protocol. 
-    It is used to verify that the email is sent from the claimed sender, and that the email is not tampered with in transit.
+    DKIM is a widely used email authentication protocol. It is used to verify that the email is sent from the claimed sender, and that the email is not tampered with in transit.
     
-    An attacker is able to spoof any identity and change the content of the email any way they want, as long as the spoofed identity is whitelisted by the victim. (Note: Not that the attacker is whitelisted, but the identity that the attacker pretends to be, is whitelisted).
-
-    This project is Completed in Python.
+    An attacker is able to spoof any identity and change the content of the email any way they want, as long as the spoofed identity is whitelisted by the victim. 
+    (Note: Not that the attacker is whitelisted, but the identity that the attacker pretends to be, is whitelisted).

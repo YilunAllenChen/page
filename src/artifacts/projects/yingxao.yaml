@@ -13,5 +13,3 @@ Project:
     It's a self-watering pot that automatically waters your plants when they are thirsty, and also adjusts lighting conditions to ensure optimal growth.
 
     It's also connected to the cloud platform, to make sure we can continuously improve the algorithm and provide the best care for your plants.
-
-    Built with Python (controller) and Java (mobile app).

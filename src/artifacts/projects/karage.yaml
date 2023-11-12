@@ -10,6 +10,8 @@ Project:
   desc: |-
     Karage set out to be a fully-featured trading platform fully written in pure Rust.
 
-    As of Sept 2022, an experimental market-making bot has been implemented.
-    
-    It automatically make quotes on the Binance exchange on Bitcoin Future contracts.
+    Current implementation:
+
+    (Sept 2022) Market-making bot for binance bitcoin perpetual future on the testing network
+
+    (Oct 2023) Equity market-making bot on Alpaca Markets

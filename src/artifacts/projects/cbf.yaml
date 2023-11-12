@@ -11,5 +11,3 @@ Project:
     Rendezvous Consensus Problem with Double Integrator Control Barrier Function Simulation.
 
     The algorithm allows agents, who only have local information, to reach a consensus on a rendezvous point, while avoiding collisions with each other and obstacles.
-
-    Implemented in Python.

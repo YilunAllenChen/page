@@ -13,7 +13,7 @@ pub enum Language {
 }
 
 #[derive(PartialEq, Debug, Serialize, Deserialize)]
-pub struct RawArticle {
+pub struct RawProject {
     pub title: String,
     pub time: String,
     pub languages: Vec<Language>,

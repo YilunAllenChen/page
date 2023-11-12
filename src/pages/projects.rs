@@ -1,19 +1,16 @@
 use yew::prelude::*;
 
 use crate::items::Project;
-use crate::models::{BuiltYaml, OneOfArticle, RawArticle};
-use crate::Page;
+use crate::models::{BuiltYaml, OneOfArticle, RawProject};
 
-pub struct Tour;
+pub struct Projects;
 
 #[derive(Properties, PartialEq)]
-pub struct TourProps {
-    pub on_clicked: Callback<Page>,
-}
+pub struct Props {}
 
-impl Component for Tour {
+impl Component for Projects {
     type Message = ();
-    type Properties = TourProps;
+    type Properties = Props;
 
     fn create(_ctx: &Context<Self>) -> Self {
         Self {}
@@ -31,7 +28,7 @@ impl Component for Tour {
         let yaml = include_str!("../artifacts/build/compiled.yaml");
         let built_yaml: BuiltYaml = serde_yaml::from_str(yaml).unwrap();
 
-        let mut all_artifacts: Vec<RawArticle> = built_yaml
+        let mut all_artifacts: Vec<RawProject> = built_yaml
             .artifacts
             .into_iter()
             .filter_map(|a| match a {
@@ -51,7 +48,7 @@ impl Component for Tour {
             .collect();
 
         html! {
-        <div class="mx-auto mt-10 grid px-8 grid-cols-1 gap-x-8 gap-y-16 pt-10 lg:grid-cols-2 xl:grid-cols-3 xl:px-4">
+        <div class="bg-black mx-auto mt-10 grid px-8 grid-cols-1 gap-x-8 gap-y-16 pt-10 lg:grid-cols-2 md:mx-16 md:gap-x-16 xl:px-4">
             {articles}
         </div>
         }

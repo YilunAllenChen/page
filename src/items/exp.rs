@@ -42,10 +42,8 @@ impl Component for Experience {
                         <p class="text-sm text-gray-400">{exp.title.clone()}</p>
                         <p class="text-sm text-gray-400 items-end">{exp.location.clone()}</p>
                     </div>
-                    <div class="mt-4 shrink-0 flex flex-col items-start">
-                        <pre class="font-sans text-sm leading-6">
-                            {exp.desc.clone()}
-                        </pre>
+                    <div class="mt-4 items-start">
+                        {Html::from_html_unchecked(exp.desc.clone().into())}
                     </div>
                 </div>
               </li>

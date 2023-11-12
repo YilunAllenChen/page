@@ -2,13 +2,13 @@ mod exp;
 pub use exp::RawExperience;
 
 mod proj;
-pub use proj::{Language, ProjectStatus, RawArticle};
+pub use proj::{Language, ProjectStatus, RawProject};
 use serde::{Deserialize, Serialize};
 
 #[derive(Deserialize, Debug, Serialize)]
 pub enum OneOfArticle {
     Experience(RawExperience),
-    Project(RawArticle),
+    Project(RawProject),
 }
 
 #[derive(Deserialize, Debug, Serialize)]

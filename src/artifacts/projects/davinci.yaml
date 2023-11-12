@@ -2,7 +2,7 @@ Project:
   title: DaVinci Ergonomics Laboratory
   time: "2022-10"
   languages: [Cpp, Javascript]
-  status: Completed
+  status: Discontinued
   tags: ["Hardware", "Startup"]
   link: https://davinci-ergo-lab.com/#home
   preview: |-
@@ -10,6 +10,4 @@ Project:
   desc: |-
     I built a startup aiming to build the next generation of ergonomic keyboards: customizable, affordable and empowering.
 
-    Built with AutoDesk Eagle (PCB), AutoDesk Inventor CAD (mechanicals), C++ (firmware), and React (website).
-
-    Click on the title to visit the project website.
+    I had to discontinue this because my work visa doesn't allow me to run a company while being employed. 😢

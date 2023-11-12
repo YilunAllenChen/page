@@ -2,14 +2,14 @@ use yew::prelude::*;
 
 use crate::html_utils::make_tag;
 
-use crate::models::{ProjectStatus, RawArticle};
+use crate::models::{ProjectStatus, RawProject};
 use serde::Deserialize;
 
 pub struct Project {}
 
 #[derive(Properties, PartialEq, Deserialize, Debug)]
 pub struct ProjectProps {
-    pub project: RawArticle,
+    pub project: RawProject,
 }
 
 impl Component for Project {
@@ -34,14 +34,14 @@ impl Component for Project {
         let (text, color) = match proj.status {
             ProjectStatus::Completed => ("Completed", "green"),
             ProjectStatus::Ongoing => ("Ongoing", "yellow"),
-            ProjectStatus::Discontinued => ("Discontinued", "red"),
+            ProjectStatus::Discontinued => ("Discontinued", "indigo"),
         };
 
-        let dot_class = format!("flex-none rounded-full bg-{}-500/20 p-1.5", color);
-        let dot_inner_class = format!("h-2 w-2 rounded-full bg-{}-500", color);
+        let dot_class = format!("flex-none rounded-full bg-{}-500/20 p-1", color);
+        let dot_inner_class = format!("h-1.5 w-1.5 rounded-full bg-{}-500", color);
         let dot_and_text = html! {
             <div class="flex items-center gap-x-1.5">
-                <p class="text-base leading-5 text-slate-200">{text}</p>
+                <p class="text-sm leading-5 text-slate-200">{text}</p>
                 <div class={dot_class}>
                     <div class={dot_inner_class}></div>
                 </div>
@@ -77,31 +77,32 @@ impl Component for Project {
             .collect::<Vec<Html>>();
 
         html! {
-          <article class="bg-slate-900 flex rounded-lg p-4 md:p-6 flex-col items-start justify-between">
+          <article class="ease-in whitespace-normal bg-slate-900 flex rounded-lg p-4 md:p-6 lg:p-8 flex-col items-start justify-between">
+            <a class="w-full" href={proj.link.clone()} target="_blank">
             <div class="flex w-full justify-between gap-x-2 text-xs">
             <div>
-                <time datetime="2020-03-16" class="text-gray-300 text-base">{proj.time.clone()}</time>
+                <p class="text-gray-300 text-sm">{proj.time.clone()}</p>
             </div>
             <div>
                 {dot_and_text}
             </div>
             </div>
-            <div class="group relative">
-            <h3 class="mt-3 text-3xl font-semibold leading-6 text-gray-100 group-hover:text-blue-400">
-                <a href={proj.link.clone()} target="_blank">
-                <span class="text-xl"></span>
+            <div class="w-full group">
+            <h3 class="mt-3 text-3xl font-semibold leading-8 text-slate-300 group-hover:text-blue-400">
                 {proj.title.clone()}
-                </a>
             </h3>
             <div class="flex pt-4 items-center gap-x-2 text-xs">
               {language_tags}
               {tags}
             </div>
-            <pre class="mt-5 font-sans line-clamp-10 text-base leading-6 text-gray-300">{proj.desc.clone()}</pre>
+            <div class="text-white text-base mt-8 gap-x-2 leading-7">
+                {Html::from_html_unchecked(proj.desc.clone().into())}
+            </div>
             </div>
             <div class="w-full pt-4">
-              <img src={proj.preview.clone()} class="object-cover rounded-lg h-72 w-full ..."/>
+              <img src={proj.preview.clone()} class="object-cover rounded-lg h-[25vh] w-full"/>
             </div>
+            </a>
         </article>
         }
     }

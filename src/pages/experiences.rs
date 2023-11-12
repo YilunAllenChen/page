@@ -3,19 +3,16 @@ use yew::prelude::*;
 use crate::{
     items::Experience,
     models::{BuiltYaml, OneOfArticle, RawExperience},
-    Page,
 };
 
-pub struct About;
+pub struct Experiences;
 
 #[derive(Properties, PartialEq)]
-pub struct AboutProps {
-    pub on_clicked: Callback<Page>,
-}
+pub struct Props {}
 
-impl Component for About {
+impl Component for Experiences {
     type Message = ();
-    type Properties = AboutProps;
+    type Properties = Props;
 
     fn create(_ctx: &Context<Self>) -> Self {
         Self {}
@@ -49,7 +46,7 @@ impl Component for About {
             .collect();
 
         html! {
-        <div class="bg-black h-full">
+        <div class="bg-black h-screen">
             <div class="relative isolate px-2 pt-14 lg:px-8">
                 <div class="mx-auto max-w-4xl py-8 lg:py-12 bg-opacity-50">
                     <ul role="list" class="text-white px-2 md:px-20 lg:px-36 md:py-10 divide-y divide-gray-800">
