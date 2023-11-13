@@ -49,9 +49,9 @@ impl Component for Nav {
             html! {
                 <div class="z-50 fixed bottom-4 left-4">
 
-                <div class="animate-enter-bottom flex-none rounded-full bg-blue-500/20 p-2">
+                <div class="animate-enter-bottom flex-none rounded-full bg-blue-500/20 p-1.5">
                   <button
-                      class="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center text-3xl"
+                      class="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center text-2xl"
                       onclick={ctx.link().callback(|_| Msg::ToggleSidebar)}
                   >
                     {"🧭"}
@@ -61,21 +61,23 @@ impl Component for Nav {
             }
         } else {
             let nav_buttons = vec![
-                Route::Home,
-                Route::Contact,
-                Route::Projects,
-                Route::Experiences,
+                (Route::Home, "cyan"),
+                (Route::Contact, "green"),
+                (Route::Projects, "indigo"),
+                (Route::Experiences, "orange"),
             ]
             .into_iter()
-            .map(|page| {
+            .map(|(page, color)| {
                 let page_name = page.clone().to_string();
+                let class = format!(
+                    "rounded-md w-2/3 bg-{}-500 my-2.5 px-3.5 py-2.5
+                    text-sm font-semibold text-white shadow-sm hover:bg-{}-300",
+                    color, color
+                );
                 html! {
                     <button
                         onclick={ctx.link().callback(move |_|Msg::SelectPage(page.clone()))}
-                        class=r#"
-                            rounded-md w-full bg-blue-500 my-2.5 px-3.5 py-2.5
-                            text-sm font-semibold text-white shadow-sm hover:bg-blue-300
-                        "#
+                        class={class}
                     >
                     {page_name}
                     </button>
@@ -88,12 +90,12 @@ impl Component for Nav {
                 <div class="fixed inset-0 z-20 w-screen overflow-y-auto">
                   <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
                     <div class="relative ease-in transform overflow-hidden rounded-lg text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-                      <div class="bg-slate-700 px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-                          <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-                            <h3 class="text-base font-semibold leading-6 text-slate-200" id="modal-title">
+                      <div class="bg-slate-900 px-4 py-5 sm:p-6">
+                          <div class="mt-3 text-center sm:ml-4 sm:mt-0">
+                            <h3 class="text-base font-semibold leading-6 text-slate-100" id="modal-title">
                               {"Navigate"}
                             </h3>
-                            <div class="mt-2">
+                            <div class="mt-2 mb-6">
                               <p class="text-sm text-gray-300">
                                 {"Navigate to any page easily from here."}
                               </p>
@@ -101,7 +103,7 @@ impl Component for Nav {
                             {for nav_buttons}
                             <button
                               type="button"
-                              class="inline-flex mt-20 w-full justify-center rounded-md bg-red-100 px-3 py-2 text-sm font-semibold text-black shadow-sm hover:bg-red-300"
+                              class="inline-flex mt-10 w-2/3 justify-center rounded-md bg-red-100 px-3 py-2 text-sm font-semibold text-black shadow-sm hover:bg-red-300"
                               onclick={ctx.link().callback(|_| Msg::ToggleSidebar)}
                             >
                               {"❌"}
