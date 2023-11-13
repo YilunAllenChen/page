@@ -51,7 +51,7 @@ impl Component for Nav {
 
                 <div class="animate-enter-bottom flex-none rounded-full bg-blue-500/20 p-2">
                   <button
-                      class="w-16 h-16 bg-blue-500 text-white rounded-full flex items-center justify-center text-3xl"
+                      class="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center text-3xl"
                       onclick={ctx.link().callback(|_| Msg::ToggleSidebar)}
                   >
                     {"🧭"}

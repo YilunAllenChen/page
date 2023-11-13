@@ -45,7 +45,7 @@ impl Component for Home {
                                     {"Contact Me"}
                                 </button>
                                 <button
-                                    onclick={nav.clone()(&Route::Contact)}
+                                    onclick={nav.clone()(&Route::Experiences)}
                                     class="rounded-md w-full md:w-1/4 bg-yellow-600 my-2.5 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-yellow-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600">
                                     {"Experiences"}
                                 </button>
