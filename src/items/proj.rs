@@ -77,30 +77,30 @@ impl Component for Project {
             .collect::<Vec<Html>>();
 
         html! {
-          <article class="ease-in whitespace-normal bg-slate-900 flex rounded-lg p-4 md:p-6 lg:p-8 flex-col items-start justify-between">
-            <a class="w-full" href={proj.link.clone()} target="_blank">
+        <article class="ease-in whitespace-normal bg-slate-900 flex rounded-lg p-4 md:p-6 lg:p-8 items-start justify-between">
+            <a class="flex flex-col h-full w-full" href={proj.link.clone()} target="_blank">
             <div class="flex w-full justify-between gap-x-2 text-xs">
-            <div>
-                <p class="text-gray-300 text-sm">{proj.time.clone()}</p>
-            </div>
-            <div>
-                {dot_and_text}
-            </div>
+                <div>
+                    <p class="text-gray-300 text-sm">{proj.time.clone()}</p>
+                </div>
+                <div>
+                    {dot_and_text}
+                </div>
             </div>
             <div class="w-full group">
-            <h3 class="mt-3 text-3xl font-semibold leading-8 text-slate-300 group-hover:text-blue-400">
-                {proj.title.clone()}
-            </h3>
-            <div class="flex pt-4 items-center gap-x-2 text-xs">
-              {language_tags}
-              {tags}
+                <h3 class="mt-3 text-3xl font-semibold leading-8 text-slate-300 group-hover:text-blue-400">
+                    {proj.title.clone()}
+                </h3>
+                <div class="flex pt-4 items-center gap-x-2 text-xs">
+                {language_tags}
+                {tags}
+                </div>
+                <div class="text-white text-base mt-8 gap-x-2 leading-7">
+                    {Html::from_html_unchecked(proj.desc.clone().into())}
+                </div>
             </div>
-            <div class="text-white text-base mt-8 gap-x-2 leading-7">
-                {Html::from_html_unchecked(proj.desc.clone().into())}
-            </div>
-            </div>
-            <div class="w-full pt-4">
-              <img src={proj.preview.clone()} class="object-cover rounded-lg h-[25vh] w-full"/>
+            <div class="w-full mt-auto self-end pt-4">
+                <img src={proj.preview.clone()} class="object-cover rounded-lg h-[25vh] w-full"/>
             </div>
             </a>
         </article>

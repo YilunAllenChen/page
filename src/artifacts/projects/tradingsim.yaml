@@ -1,5 +1,5 @@
 Project:
-  title: TradingSim
+  title: Exchange Simulator
   time: "2022-12"
   languages: [Python, Javascript]
   status: Completed
@@ -8,6 +8,6 @@ Project:
   preview: |-
     assets/tradingsim.png
   desc: |-
-    TradingSim is a trading simulator that allows players to trade against each other and bots in a simulated market. Market impact of orders are materialized and reflected in real time.
-
-    The simulator, backed by a FIFO matching engine, ships with both a web interface and RESTful API's.
+    A simulated exchange backed by a real FIFO matching engine. Players can trade with each other (and my bots) in real time, and the exchange will match orders.
+    
+    Ships with a clean, minimalist web-based GUI for click trading, and a suite of RESTful APIs for programmatic trading.
