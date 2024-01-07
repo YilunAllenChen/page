@@ -1,0 +1,12 @@
+Project:
+  title: Rusume
+  time: "2023-12"
+  languages: [Rust]
+  status: Completed
+  tags: ["Web"]
+  link: https://yilunallenchen.github.io/Rusume/#/
+  preview: |-
+    assets/rusume.png
+  desc: |-
+    Rusume is a Yew/Rust powered real-time resume builder. I started this because I was overwhelmed by how hard it is to change the
+    layout of a Latex-based resume. I'd rather use Tailwind CSS.

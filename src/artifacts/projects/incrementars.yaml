@@ -1,0 +1,11 @@
+Project:
+  title: Incrementars
+  time: "2024-01"
+  languages: [Rust]
+  status: Completed
+  tags: ["Incremental Computing"]
+  link: https://github.com/YilunAllenChen/incrementars
+  preview: |-
+    assets/incrementars.png
+  desc: |-
+    Incrementars is a highly experimental incremental computation framework, heavily inspired by Jane Street's Incremental library.
