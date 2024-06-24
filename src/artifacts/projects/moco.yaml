@@ -2,12 +2,10 @@ Project:
   title: Museum of Code
   time: "2023-10"
   languages: [Rust]
-  status: Ongoing
+  status: Completed
   tags: ["Art"]
   link: https://yilunallenchen.github.io/museum_of_code/
   preview: |-
     assets/moco.png
   desc: |-
-    Museum of Code is a collection of beautiful code in all languages.
-
-    It's a playful project that aims to showcase the beauty of computer programs in the form of a museum.
+    Showcase the beauty of computer programs in the form of a museum.

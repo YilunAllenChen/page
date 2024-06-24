@@ -8,6 +8,4 @@ Project:
   preview: |-
     assets/pde.png
   desc: |-
-    Anti-alising is a technique used in computer graphics to reduce the visual artifacts known as aliasing when representing a high-resolution image at a lower resolution.
-
-    The algorithm is a variant of the geometric heat equation, but instead of promoting diffusion along edges, it promotes diffusion across edges while preserving other features of the image, achieving a similar effect to anti-alising.
+    Pure math-based anti-aliasing technique with a variant of geometric heat equation, promoting diffusion across edges.

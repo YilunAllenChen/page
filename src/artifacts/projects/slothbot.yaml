@@ -8,6 +8,4 @@ Project:
   preview: |-
     assets/slothbot.jpeg
   desc: |-
-    The SlothBot is a robot that moves slowly along a cable, monitoring the environment and collecting data on the climate.
-
-    It's a playful experiment in robotics, as it embraces "slowness" as a design paradigm, allowing us to rethink the way robots interact with the world.
+    Environment monitoring robots that embrace "slowness" as a design paradigm.

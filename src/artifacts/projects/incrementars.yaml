@@ -8,4 +8,4 @@ Project:
   preview: |-
     assets/incrementars.png
   desc: |-
-    Incrementars is a highly experimental incremental computation framework, heavily inspired by Jane Street's Incremental library.
+    Incremental, self-adapting computation framework in rust. Blazingly fast, incredibly powerful, and rust safe all the way.

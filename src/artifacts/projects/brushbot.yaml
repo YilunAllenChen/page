@@ -8,8 +8,4 @@ Project:
   preview: |-
     assets/brushbot.png
   desc: |-
-    BrushBot 2.0 is a continuation of the BrushBot project.
-
-    It aims to explore the randomness of movements in its most extreme form - the robot moves solely by vibrating its brush.
-
-    BrushBot 2.0 has significantly smaller size and weight, and is equipped with more advanced sensors.
+    Robotics with randomness in its extreme form

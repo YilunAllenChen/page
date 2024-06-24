@@ -8,6 +8,4 @@ Project:
   preview: |-
     assets/tradingsim.png
   desc: |-
-    A simulated exchange backed by a real FIFO matching engine. Players can trade with each other (and my bots) in real time, and the exchange will match orders.
-    
-    Ships with a clean, minimalist web-based GUI for click trading, and a suite of RESTful APIs for programmatic trading.
+    A online, multiplayer simulated exchange backed by a real FIFO matching engine.
