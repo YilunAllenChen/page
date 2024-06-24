@@ -32,8 +32,7 @@ impl Component for Home {
                 <div class="relative px-6 lg:px-8">
                     <div class="mx-auto max-w-2xl py-32 h-screen sm:py-48 lg:py-56 xl:py-1/4">
                         <div class="text-center">
-                            <h1 class="text-2xl md:text-4xl font-bold tracking-wider text-gray-100 sm:text-6xl font-mono">{r#"Yilun "Allen" Chen"#}</h1>
-                            <p class="mt-6 text-sm md:text-lg leading-8 text-gray-200">{"I Build Stuff!"}</p>
+                            <h1 class="text-2xl md:text-4xl tracking-wider text-gray-100 sm:text-6xl font-mono">{r#"Yilun "Allen" Chen"#}</h1>
                             <div class="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-1 mb-10">
                                 <button
                                     onclick={nav.clone()(&Route::Projects)}
@@ -51,7 +50,8 @@ impl Component for Home {
                                     {"Contact"}
                                 </button>
                             </div>
-                            <p class="mt-2 text-xs md:text-base text-bold text-gray-300">{"Built with Rust/Yew, Tailwind CSS and ❤️"}</p>
+                            <p class="mt-2 text-xs md:text-sm text-bold text-gray-200">{"Built with Rust/Yew, Tailwind CSS and ❤️"}</p>
+                            <p class="mt-8 text-xs md:text-xs text-bold text-gray-400">{"YilunAllenChen @ 2024, All Rights Reserved"}</p>
                         </div>
                     </div>
                 </div>
