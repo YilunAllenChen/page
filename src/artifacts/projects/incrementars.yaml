@@ -1,0 +1,11 @@
+Project:
+  title: Incrementars
+  time: "2024-01"
+  languages: [Rust]
+  status: Ongoing
+  tags: ["Incremental Computing"]
+  link: https://github.com/YilunAllenChen/incrementars
+  preview: |-
+    assets/incrementars.png
+  desc: |-
+    Incremental, self-adapting computation framework in rust. Blazingly fast, incredibly powerful, and rust safe all the way.

@@ -1,0 +1,11 @@
+Project:
+  title: Rusume
+  time: "2023-12"
+  languages: [Rust]
+  status: Completed
+  tags: ["Web"]
+  link: https://yilunallenchen.github.io/Rusume/#/
+  preview: |-
+    assets/rusume.png
+  desc: |-
+    Real-time resume builder. 

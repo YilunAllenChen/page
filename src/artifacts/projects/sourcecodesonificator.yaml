@@ -8,8 +8,4 @@ Project:
   preview: |-
     assets/sonicpy.png
   desc: |-
-    This playful project is a Python app that converts source code into music.
-
-    It looks for patterns in the code, and then maps those patterns to musical notes.
-
-    Award: First Place, HackGT 2019 Georgia Tech Horizon Hackathon.
+    Turns your code into music. (First Place, HackGT 2019 Georgia Tech Horizon Hackathon).
