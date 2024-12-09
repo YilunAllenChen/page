@@ -10,7 +10,7 @@ mod items;
 mod models;
 mod pages;
 
-use pages::{Contact, Experiences, Home, Nav, Projects, Wip};
+use pages::{Blogs, Contact, Experiences, Home, Nav, Projects, Wip};
 
 #[derive(Debug, Clone, PartialEq, Routable)]
 pub enum Route {
@@ -22,6 +22,8 @@ pub enum Route {
     Projects,
     #[at("/experiences")]
     Experiences,
+    #[at("/blogs")]
+    Blogs,
     #[at("/*_path")]
     Wip { _path: String },
 }
@@ -33,6 +35,7 @@ impl Display for Route {
             Route::Contact => "📧 Contact",
             Route::Projects => "🛠️ Projects",
             Route::Experiences => "🚀 Experiences",
+            Route::Blogs => "📚 Blogs",
             _ => "WIP",
         };
         write!(f, "{}", name)
@@ -45,6 +48,7 @@ fn switch(route: Route) -> Html {
         Route::Contact => html! {<Contact/>},
         Route::Experiences => html! {<Experiences />},
         Route::Projects => html! {<Projects />},
+        Route::Blogs => html! {<Blogs />},
         Route::Wip { _path } => html! {<Wip />},
     }
 }

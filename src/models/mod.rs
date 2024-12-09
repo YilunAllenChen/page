@@ -5,10 +5,14 @@ mod proj;
 pub use proj::{Language, ProjectStatus, RawProject};
 use serde::{Deserialize, Serialize};
 
+mod blog;
+pub use blog::RawBlog;
+
 #[derive(Deserialize, Debug, Serialize)]
 pub enum OneOfArticle {
     Experience(RawExperience),
     Project(RawProject),
+    Blog(RawBlog),
 }
 
 #[derive(Deserialize, Debug, Serialize)]

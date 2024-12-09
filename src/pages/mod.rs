@@ -15,3 +15,6 @@ pub use nav::Nav;
 
 mod experiences;
 pub use experiences::Experiences;
+
+mod blogs;
+pub use blogs::Blogs;

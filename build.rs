@@ -1,5 +1,7 @@
 use std::fs;
 use std::path::Path;
+
+use markdown::Options;
 extern crate regex;
 include!("src/models/mod.rs");
 
@@ -32,6 +34,10 @@ fn parse_dir(input_dirs: Vec<&str>, output_dir: &str) {
                         desc: markdown::to_html(exp.desc.as_str()),
                         ..exp
                     }),
+                    OneOfArticle::Blog(blog) => OneOfArticle::Blog(RawBlog {
+                        body: markdown::to_html_with_options(blog.body.as_str(), &Options::gfm()).unwrap(),
+                        ..blog
+                    }),
                 })
                 .collect();
 
@@ -62,7 +68,11 @@ fn parse_dir(input_dirs: Vec<&str>, output_dir: &str) {
 
 fn main() {
     parse_dir(
-        vec!["src/artifacts/projects", "src/artifacts/experiences"],
+        vec![
+            "src/artifacts/projects",
+            "src/artifacts/experiences",
+            "src/artifacts/blogs",
+        ],
         "src/artifacts/build/compiled.yaml",
     );
 }
