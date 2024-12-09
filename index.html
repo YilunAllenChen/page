@@ -2,6 +2,22 @@
 <html lang="en">
 
 <head>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+<script>
+    window.renderMarkdownToHTML = function(markdownText) {
+		console.log(marked)
+        marked.setOptions({
+            highlight: function (code, lang) {
+                return hljs.highlightAuto(code, [lang]).value;
+            },
+        });
+        return marked.parse(markdownText);
+    };
+</script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Allen Chen</title>
@@ -27,4 +43,3 @@
 </body>
 
 </html>
-<script src="https://cdn.jsdelivr.net/gh/MarketingPipeline/Markdown-Tag/markdown-tag.js"></script> 

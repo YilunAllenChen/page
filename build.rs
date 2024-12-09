@@ -34,10 +34,7 @@ fn parse_dir(input_dirs: Vec<&str>, output_dir: &str) {
                         desc: markdown::to_html(exp.desc.as_str()),
                         ..exp
                     }),
-                    OneOfArticle::Blog(blog) => OneOfArticle::Blog(RawBlog {
-                        body: markdown::to_html_with_options(blog.body.as_str(), &Options::gfm()).unwrap(),
-                        ..blog
-                    }),
+                    OneOfArticle::Blog(blog) => OneOfArticle::Blog(blog),
                 })
                 .collect();
 
