@@ -3,15 +3,10 @@ use yew::prelude::*;
 use crate::{
     items::Blog,
     models::{BuiltYaml, OneOfArticle, RawBlog},
-    Route,
 };
-use yew_router::hooks::use_navigator;
 
 #[function_component(Blogs)]
 pub fn my_component() -> Html {
-    // let navigator = use_navigator().unwrap();
-    // let onclick = Callback::from(move |_: MouseEvent| navigator.push(&Route::Home));
-
     let yaml = include_str!("../artifacts/build/compiled.yaml");
     let built_yaml: BuiltYaml = serde_yaml::from_str(yaml).unwrap();
 

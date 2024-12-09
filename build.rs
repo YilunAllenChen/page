@@ -1,7 +1,5 @@
 use std::fs;
 use std::path::Path;
-
-use markdown::Options;
 extern crate regex;
 include!("src/models/mod.rs");
 
