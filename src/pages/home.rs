@@ -30,7 +30,7 @@ impl Component for Home {
             <div class="bg-black h-screen bg-cover bg-center bg-[url('./assets/background_mobile.png')] md:bg-[url('./assets/background.png')]" >
                 <div class="absolute inset-0 bg-black bg-opacity-70"></div>
                 <div class="relative px-6 lg:px-8">
-                    <div class="mx-auto max-w-2xl py-32 h-screen sm:py-48 lg:py-56 xl:py-1/4">
+                    <div class="mx-auto max-w-2xl h-screen py-[30vh] lg:scale-[1.2] xl:scale-[1.5]">
                         <div class="text-center">
                             <h1 class="text-2xl md:text-4xl tracking-wider text-gray-100 sm:text-6xl font-mono">{r#"Yilun "Allen" Chen"#}</h1>
                             <div class="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-1 mb-10">

@@ -47,7 +47,7 @@ impl Component for Nav {
     fn view(&self, ctx: &Context<Self>) -> Html {
         if !self.show {
             html! {
-                <div class="z-50 fixed bottom-4 left-4">
+                <div class="z-50 fixed bottom-4 right-4">
 
                 <div class="animate-enter-bottom flex-none rounded-full bg-blue-500/20 p-1.5">
                   <button

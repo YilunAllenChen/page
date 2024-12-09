@@ -29,10 +29,10 @@ pub enum Route {
 impl Display for Route {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let name = match self {
-            Route::Home => "Home",
-            Route::Contact => "Contact",
-            Route::Projects => "Projects",
-            Route::Experiences => "Experiences",
+            Route::Home => "🏠 Home",
+            Route::Contact => "📧 Contact",
+            Route::Projects => "🛠️ Projects",
+            Route::Experiences => "🚀 Experiences",
             _ => "WIP",
         };
         write!(f, "{}", name)

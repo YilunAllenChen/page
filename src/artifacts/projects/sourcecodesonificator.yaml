@@ -3,7 +3,7 @@ Project:
   time: "2019-05"
   languages: [Python]
   status: Completed
-  tags: ["Music"]
+  tags: ["Music", "Hackathon"]
   link: https://github.com/YilunAllenChen/codemposer
   preview: |-
     assets/sonicpy.png
