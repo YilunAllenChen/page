@@ -65,6 +65,7 @@ impl Component for Nav {
                 (Route::Contact, "green"),
                 (Route::Projects, "indigo"),
                 (Route::Experiences, "orange"),
+                (Route::Blogs, "sky"),
             ]
             .into_iter()
             .map(|(page, color)| {

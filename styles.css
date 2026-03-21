@@ -34,3 +34,133 @@
 html {
   background-color: black;
 }
+
+.blog {
+  color: rgb(226 232 240);
+  font-size: 1rem;
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+
+.blog > * + * {
+  margin-top: 1.25rem;
+}
+
+.blog h1,
+.blog h2,
+.blog h3,
+.blog h4 {
+  color: rgb(248 250 252);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.blog h1 {
+  font-size: 2rem;
+}
+
+.blog h2 {
+  font-size: 1.5rem;
+}
+
+.blog h3 {
+  font-size: 1.25rem;
+}
+
+.blog p,
+.blog ul,
+.blog ol,
+.blog pre,
+.blog blockquote {
+  margin-top: 1rem;
+}
+
+.blog ul,
+.blog ol {
+  padding-left: 1.5rem;
+}
+
+.blog ul {
+  list-style: disc;
+}
+
+.blog ol {
+  list-style: decimal;
+}
+
+.blog a {
+  color: rgb(125 211 252);
+}
+
+.blog a:hover {
+  color: rgb(186 230 253);
+}
+
+.blog code {
+  border-radius: 0.375rem;
+  background: rgb(15 23 42);
+  padding: 0.15rem 0.35rem;
+  font-size: 0.9em;
+}
+
+.blog pre {
+  overflow-x: auto;
+  max-width: 100%;
+  border: 1px solid rgb(30 41 59);
+  border-radius: 0.75rem;
+  background: rgb(15 23 42);
+  padding: 1rem;
+}
+
+.blog pre code {
+  background: transparent;
+  padding: 0;
+}
+
+.blog img,
+.blog video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid rgb(30 41 59);
+  border-radius: 0.75rem;
+}
+
+.blog table {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+.blog thead,
+.blog tbody,
+.blog tr {
+  width: max-content;
+  min-width: 100%;
+}
+
+.blog th,
+.blog td {
+  border: 1px solid rgb(30 41 59);
+  padding: 0.75rem 1rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.blog th {
+  background: rgb(15 23 42);
+  color: rgb(248 250 252);
+}
+
+.blog td {
+  background: rgb(2 6 23);
+}
+
+.blog blockquote {
+  border-left: 4px solid rgb(56 189 248);
+  padding-left: 1rem;
+  color: rgb(148 163 184);
+}

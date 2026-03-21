@@ -49,6 +49,11 @@ impl Component for Home {
                                     class="rounded-md w-2/3 md:w-1/4 bg-green-600 my-2.5 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                                     {"Contact"}
                                 </button>
+                                <button
+                                    onclick={nav.clone()(&Route::Blogs)}
+                                    class="rounded-md w-2/3 md:w-1/4 bg-sky-600 my-2.5 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-sky-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">
+                                    {"Blogs"}
+                                </button>
                             </div>
                             <p class="mt-2 text-xs md:text-sm text-bold text-gray-200">{"Built with Rust/Yew, Tailwind CSS and ❤️"}</p>
                             <p class="mt-8 text-xs md:text-xs text-bold text-gray-400">{"YilunAllenChen @ 2024, All Rights Reserved"}</p>

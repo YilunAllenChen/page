@@ -24,6 +24,8 @@ pub enum Route {
     Experiences,
     #[at("/blogs")]
     Blogs,
+    #[at("/blogs/:slug")]
+    BlogPost { slug: String },
     #[at("/*_path")]
     Wip { _path: String },
 }
@@ -36,6 +38,7 @@ impl Display for Route {
             Route::Projects => "🛠️ Projects",
             Route::Experiences => "🚀 Experiences",
             Route::Blogs => "📚 Blogs",
+            Route::BlogPost { .. } => "📚 Blogs",
             _ => "WIP",
         };
         write!(f, "{}", name)
@@ -49,6 +52,7 @@ fn switch(route: Route) -> Html {
         Route::Experiences => html! {<Experiences />},
         Route::Projects => html! {<Projects />},
         Route::Blogs => html! {<Blogs />},
+        Route::BlogPost { slug } => html! {<Blogs slug={Some(slug)} />},
         Route::Wip { _path } => html! {<Wip />},
     }
 }

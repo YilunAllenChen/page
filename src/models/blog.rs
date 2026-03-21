@@ -1,7 +1,9 @@
 use serde::{Deserialize, Serialize};
 
-#[derive(PartialEq, Debug, Serialize, Deserialize)]
+#[derive(Clone, PartialEq, Debug, Serialize, Deserialize)]
 pub struct RawBlog {
+    #[serde(default)]
+    pub slug: String,
     pub time: String,
     pub title: String,
     pub tags: Vec<String>,
